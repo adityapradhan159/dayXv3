@@ -1,0 +1,88 @@
+.HeroSection{
+    width: 100%;
+    position: relative;
+}
+
+
+.hero_section_background img{
+    width: 100%;   
+}
+
+.hero_section_description{
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #F4F4F4;
+    text-align: center;
+    width: 810px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero_section_description h1{
+    margin: 16px 0px !important;
+    font-weight: 800;
+}
+
+.hero_section_description h2{
+    font-weight: 800;
+}
+
+.hero_section_description h2.light_font_weight{
+    font-weight: 400;
+}
+
+
+.hero_section_action_btns{
+    display: flex;
+    gap: 24px;
+    margin-top: 50px;
+}
+
+.hero_section_advantages{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 36px 0px;
+    background-color: #F9F9F9;
+    border-radius: 533px 533px 0px 0px;
+    box-shadow: 7px 25px 40.9px 0px rgba(5, 26, 69, 0.12) inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_section_advantages_container{
+    width: 1076px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero_section_advantages_container .advantages_card{
+    width: calc(25% - 30px);
+    padding: 29px 23px;
+}
+
+.advantages-divider{
+    width: 2px;
+    height: 120.5px;
+    background-color: #D7D7D7;
+}
+
+.hero_section_advantages_container .advantages_card h1{
+    color: #3F0B50;
+    font-weight: 800;
+    line-height: 129.9%;
+    letter-spacing: -2.7px;
+}
+
+.hero_section_advantages_container .advantages_card p{
+    color: #7A7A7A;
+    margin-top: 10px;
+    font-weight: 600;
+    opacity: 0.9;
+}

@@ -1,0 +1,20 @@
+.Button button{
+    padding: 16px 45px;
+    border-radius: 43.108px;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.Button button.schedule_call{
+    background-color: #F0F0F0;
+    color: #000;
+}
+
+.Button button.join_waitlist{
+    background-color: transparent;
+    color: #FFF;
+    border: 1px solid #FFF;
+}

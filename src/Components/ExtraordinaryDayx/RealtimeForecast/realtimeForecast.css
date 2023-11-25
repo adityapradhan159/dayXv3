@@ -1,0 +1,7 @@
+.RealtimeForecast{
+    padding: 32px 32px 0px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}

@@ -1,0 +1,68 @@
+.AccountingPlanning{
+    padding: 32px 32px 0px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+
+.AccountingPlanning-img{
+    margin-top: 48px;
+}
+
+.AccountingPlanning-img img{
+    width: 100%;
+    height: 220px;
+}
+
+.AccountingPlanning_points{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.points_div{
+    display: flex;
+    align-items: flex-start;
+}
+
+.points_div .marker{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #404040;
+    margin-top: 10px;
+    margin-right: 8px;
+}
+
+.AccountingPlanning_points p{
+    color: #8D8787;
+}
+
+.AccountingPlanning_points li::marker{
+    margin-right: 8px !important;
+}
+
+.card-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.redirect_Link{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+    cursor: pointer;
+}
+
+.redirect_Link h4{
+    color: #7330A7;
+    font-weight: 700;
+    /* line-height: 160%; */
+    border-bottom: 1px solid #7330A7;
+}

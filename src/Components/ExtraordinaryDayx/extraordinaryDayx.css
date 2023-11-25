@@ -1,0 +1,73 @@
+.ExtraordinaryDayx{
+    width: 100%;
+    padding: 65px 20px 100px 20px;
+    display: flex;
+    justify-content: center;
+    background: #F9F9F9;
+}
+
+.ExtraordinaryDayx_container h1{
+    font-weight: 500;
+    text-align: center;
+}
+
+.ExtraordinaryDayx_container h1 span{
+    font-weight: 800;
+    color: #959595;
+}
+
+.ExtraordinaryDayx_container_column1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.ExtraordinaryDayx_container_column2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.ExtraordinaryDayx_container .accounting{
+    width: calc(38% - 10px);
+    /* height: 200px; */
+    background-color: #959595;
+}
+
+.ExtraordinaryDayx_container .realtime{
+    width: calc(34% - 10px);
+    /* height: 200px; */
+    background-color: #959595;
+}
+
+.ExtraordinaryDayx_container .ExtraordinaryDayx_cards{
+    border-radius: 10px;
+    border: 1px solid #DDD;
+    background: radial-gradient(135.72% 126.34% at 55.8% 112.53%, #F1F1F1 0%, #FFF 63.19%);
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.ExtraordinaryDayx_container .gateway{
+    width: calc(25% - 10px);
+    height: 200px;
+    background-color: #959595;
+}
+
+.ExtraordinaryDayx_container .chatbot{
+    width: calc(45% - 16px);
+    height: 200px;
+    background-color: #959595;
+}
+
+.ExtraordinaryDayx_container .integrateTools{
+    width: calc(55% - 16px);
+    height: 200px;
+    background-color: #959595;
+}
+
+.ExtraordinaryDayx_cards h3{
+    color: #212121;
+    font-weight: 700;
+}
