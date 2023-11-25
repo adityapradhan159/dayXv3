@@ -1,0 +1,55 @@
+.DayxCta{
+    width: 100%;
+    height: 510px;
+    /* display: flex;
+    justify-content: center; */
+    padding: 100px 20px;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.dayCta_banner{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+
+.dayCta_banner img{
+    width: 100%;
+}
+
+.DayxCta_container{
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.DayxCta_container h1{
+    color: white;
+}
+
+.DayxCta_container h1 span{
+    font-weight: 800;
+}
+
+.cta-btns{
+    margin: 48px 0px !important;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.DayxCta_container h3{
+    color: white;
+}
+
+.DayxCta_container h3 span{
+    text-decoration: underline;
+    cursor: pointer;
+}

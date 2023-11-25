@@ -2,6 +2,9 @@ import React from 'react'
 import "./extraordinaryDayx.css"
 import AccountingPlanning from './AccountingPlanning/AccountingPlanning'
 import RealtimeForecast from './RealtimeForecast/RealtimeForecast'
+import Gateway from './Gateway/Gateway'
+import DayxChatbot from './DayxChatbot/DayxChatbot'
+import IntegrateTools from './IntegrateTools/IntegrateTools'
 
 const ExtraordinaryDayx = () => {
   return (
@@ -17,13 +20,19 @@ const ExtraordinaryDayx = () => {
                 <div className="ExtraordinaryDayx_cards realtime">
                   <RealtimeForecast/>
                 </div>
-                <div className="ExtraordinaryDayx_cards gateway"></div>
+                <div className="ExtraordinaryDayx_cards gateway">
+                  <Gateway/>
+                </div>
             </div>
             
             
             <div className="ExtraordinaryDayx_container_column2">
-                <div className="ExtraordinaryDayx_cards chatbot"></div>
-                <div className="ExtraordinaryDayx_cards integrateTools"></div>
+                <div className="ExtraordinaryDayx_cards chatbot">
+                  <DayxChatbot/>
+                </div>
+                <div className="ExtraordinaryDayx_cards integrateTools">
+                  <IntegrateTools/>
+                </div>
             </div>
 
            

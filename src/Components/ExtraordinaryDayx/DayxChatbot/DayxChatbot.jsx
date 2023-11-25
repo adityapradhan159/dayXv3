@@ -1,23 +1,22 @@
 import React from 'react'
-import "./accountingPlanning.css"
+import "./dayxChatbot.css"
 
-const AccountingPlanning = () => {
+const DayxChatbot = () => {
   return (
-    <div className='AccountingPlanning'>
-
+    <div className='DayxChatbot'>
         <div className="card_container1">
-            <h3>Integrated Accounting and Planning</h3>
+            <h3>GPT-Like Smart Bot Powered by LLM</h3>
 
             <div className="AccountingPlanning_points">
 
                 <div className="points_div">
                     <div className="marker"></div>
-                    <p>Streamline financial planning with smart automation.</p>
+                    <p>Chat with an intelligent assistant.</p>
                 </div>
 
                 <div className="points_div">
                     <div className="marker"></div>
-                    <p>Make decisions, not calculations.</p>
+                    <p>Instant insights, plain language.</p>
                 </div>
 
             </div>
@@ -28,22 +27,21 @@ const AccountingPlanning = () => {
         <div className="card_container2">
 
             <div className="redirect_Link">
-                <h4>Take effective decisions</h4>
+                <h4>Get your assistant</h4>
                 <img src="/assets/LandingPage/rightArrow.svg" alt="" />
             </div>
 
             <div className="AccountingPlanning-img">
                 <object
                   type='image/svg+xml'
-                  data='assets/LandingPage/Revenue.svg'>
+                  data='assets/LandingPage/Assistant.svg'>
                 </object>
-                {/* <img src="/assets/LandingPage/accountPlanning.svg" alt="" /> */}
+                {/* <img src="/assets/LandingPage/chatbot.svg" alt="" /> */}
             </div>
 
         </div>
-
     </div>
   )
 }
 
-export default AccountingPlanning
+export default DayxChatbot

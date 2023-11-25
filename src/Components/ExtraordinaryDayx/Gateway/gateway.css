@@ -1,0 +1,40 @@
+.Gateway{
+    padding: 32px;
+    height: 100%;
+    background: lightgray radial-gradient(135.72% 126.34% at 55.8% 112.53%, #EEE 0%, #FFF 63.19%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Gateway span{
+    display: block;
+    width: max-content;
+}
+
+.span_gatewayTo, .span_finance{
+    color: #000;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200%; /* 56px */
+    letter-spacing: -0.28px;
+}
+
+.span_autonomous{
+    text-align: center;
+    font-family: Manrope;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 200%; /* 88px */
+    letter-spacing: -2.2px;
+    background: linear-gradient(194deg, #3F0B50 32.02%, rgba(192, 0, 255, 0.50) 138.53%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

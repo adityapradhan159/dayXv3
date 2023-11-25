@@ -51,19 +51,19 @@
 
 .ExtraordinaryDayx_container .gateway{
     width: calc(25% - 10px);
-    height: 200px;
+    /* height: 200px; */
     background-color: #959595;
 }
 
 .ExtraordinaryDayx_container .chatbot{
     width: calc(45% - 16px);
-    height: 200px;
+    /* height: 200px; */
     background-color: #959595;
 }
 
 .ExtraordinaryDayx_container .integrateTools{
     width: calc(55% - 16px);
-    height: 200px;
+    /* height: 200px; */
     background-color: #959595;
 }
 

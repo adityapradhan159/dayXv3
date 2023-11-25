@@ -33,7 +33,11 @@ const RealtimeForecast = () => {
             </div>
 
             <div className="AccountingPlanning-img">
-                <img src="/assets/LandingPage/realtimeForecast.svg" alt="" />
+                <object
+                  type='image/svg+xml'
+                  data='assets/LandingPage/Cash Flow.svg'>
+                </object>
+                {/* <img src="/assets/LandingPage/realtimeForecast.svg" alt="" /> */}
             </div>
 
         </div>

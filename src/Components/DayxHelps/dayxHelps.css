@@ -1,0 +1,52 @@
+.DayxHelps{
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.DayxHelps_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 140px;
+}
+
+.dayxHelps_container1 h1{
+    font-weight: 500;
+}
+
+.dayxHelps_container1 h1 span{
+    background: linear-gradient(181deg, #16A3B5 53.12%, #2ADBC2 116.64%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.dayxHelps_container2 h2{
+    font-weight: 700;
+    margin-bottom: 16px !important;
+}
+
+.dayHelps_Points{
+    display: flex;
+    align-items: center;
+    margin-bottom: 9px;
+}
+
+.dayHelps_Points .marker{
+    width: 5px;
+    height: 5px;
+    background-color: #404040;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.dayHelps_Points h3{
+    color: #8D8787;
+    line-height: 172.4%;
+}
+

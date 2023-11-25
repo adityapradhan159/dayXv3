@@ -1,0 +1,27 @@
+.OurSupporters{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #0F0F10;
+    padding: 100px 20px;
+}
+
+.OurSupporters_container h1{
+    text-align: center;
+    color: #FFF;
+}
+
+.OurSupporters_container h1 span{
+    font-weight: 800;
+    color: #959595;;
+}
+
+.OurSupporters_carousel_container{
+    margin-top: 48px;
+    width: 100%;
+    height: 100px;
+    /* background-color: gray; */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
