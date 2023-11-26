@@ -20,7 +20,6 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 54px;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
@@ -43,6 +42,7 @@
     background-color: #404040;
     border-radius: 50%;
     margin-right: 8px;
+    /* margin-top: 20px; */
 }
 
 .dayHelps_Points h3{
@@ -50,3 +50,41 @@
     line-height: 172.4%;
 }
 
+
+@media screen and (max-width: 600px){
+
+    .DayxHelps{
+        padding: 72px 16px 36px 16px;
+    }
+
+    .DayxHelps_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .dayxHelps_container1 h1{
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .dayxHelps_container2{
+        padding: 20px;
+        border-radius: 14px;
+        border: 1px solid #DDD;
+        background: radial-gradient(107.55% 104.34% at 53.95% 97.99%, #F1F1F1 0%, #FFF 94.32%), rgba(228, 228, 228, 0.10);
+        box-shadow: 0px 4px 40px 2px rgba(255, 255, 255, 0.05) inset;
+        backdrop-filter: blur(35.70000076293945px);
+    }
+
+    .dayHelps_Points .marker{
+        /* margin-top: 16px; */
+    }
+
+    .dayHelps_Points h3{
+        font-size: 14px !important;
+    }
+
+}

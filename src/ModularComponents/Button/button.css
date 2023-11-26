@@ -18,3 +18,12 @@
     color: #FFF;
     border: 1px solid #FFF;
 }
+
+@media screen and (max-width: 600px){
+
+    .Button button{
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+
+}

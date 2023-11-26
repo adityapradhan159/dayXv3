@@ -32,13 +32,11 @@
 
 .ExtraordinaryDayx_container .accounting{
     width: calc(38% - 10px);
-    /* height: 200px; */
     background-color: #959595;
 }
 
 .ExtraordinaryDayx_container .realtime{
     width: calc(34% - 10px);
-    /* height: 200px; */
     background-color: #959595;
 }
 
@@ -51,23 +49,86 @@
 
 .ExtraordinaryDayx_container .gateway{
     width: calc(25% - 10px);
-    /* height: 200px; */
     background-color: #959595;
 }
 
 .ExtraordinaryDayx_container .chatbot{
     width: calc(45% - 16px);
-    /* height: 200px; */
     background-color: #959595;
 }
 
 .ExtraordinaryDayx_container .integrateTools{
     width: calc(55% - 16px);
-    /* height: 200px; */
     background-color: #959595;
 }
 
 .ExtraordinaryDayx_cards h3{
     color: #212121;
     font-weight: 700;
+}
+
+
+@media screen and (max-width: 600px){
+
+    .ExtraordinaryDayx{
+        padding: 72px 16px 35px 16px;
+        background-color: white;
+    }   
+
+    .ExtraordinaryDayx_container_column1{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .ExtraordinaryDayx_container_column2{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 24px;
+    }
+
+    .ExtraordinaryDayx_cards{
+        width: 100% !important;
+    }
+
+    .redirect_Link h4{
+        font-size: 18px !important;
+    }
+
+
+    /* ============For Accounting================== */
+    .AccountingPlanning{
+        padding: 20px 20px 0px 20px !important; 
+    }
+
+    /* ===============For Real time forecast================== */
+    .RealtimeForecast{
+        padding: 20px 20px 0px 20px !important;
+    }
+
+    /* =============For Gateway================ */
+    .Gateway{
+        padding: 20px !important;
+    }
+
+    .span_gatewayTo, .span_finance{
+        font-size: 20px !important;
+    }
+
+    .span_autonomous{
+        font-size: 40px;
+    }
+
+    
+    /* =================For Chatbot===================== */
+    .DayxChatbot{
+        padding: 20px !important;
+    }
+
+    /* =================For Integrate Tools===================== */
+    .IntegrateTools{
+        padding: 20px !important;
+    }
+
 }

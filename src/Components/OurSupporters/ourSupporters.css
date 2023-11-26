@@ -25,3 +25,19 @@
     justify-content: center;
     gap: 20px;
 }
+
+
+@media screen and (max-width: 600px){
+
+    .OurSupporters{
+        padding: 36px 16px !important;
+    }
+
+    .OurSupporters_carousel_container{
+        margin-top: 24px;
+        overflow: hidden;
+    }
+
+    
+
+}

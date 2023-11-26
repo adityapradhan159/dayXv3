@@ -35,7 +35,7 @@ const HeroSection = () => {
               <p>Savings per Week per User</p>
             </div>
 
-            <div className="advantages-divider"></div>
+            <div className="advantages-divider divider"></div>
 
             <div className="advantages_card">
               <h1>10x</h1>

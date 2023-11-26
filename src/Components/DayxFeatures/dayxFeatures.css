@@ -72,3 +72,43 @@
     margin-top: 24px !important;
     line-height: 150%;
 }
+
+
+@media screen and (max-width: 600px){
+
+    .DayxFeatures{
+        width: 100%;
+        padding: 37px 16px;
+        overflow: hidden;
+    }
+
+    .dayxGradientLogo{
+        width: 100%;
+        padding: 0px 16px;
+        top: 120px;
+    }
+
+    .dayxGradientLogo img{
+        width: 100%;
+    }
+    
+
+    .DayxFeatures_container h1{
+        width: 100%;
+        padding: 16px;
+    }
+
+    .DayFeatures_card_container{
+        flex-direction: column;
+        margin-top: 47px;
+    }
+
+    .DayFeatures_card{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .DayFeatures_card h3{
+        margin-top: 16px !important;
+    }
+}

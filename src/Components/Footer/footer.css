@@ -22,3 +22,19 @@
 .Footer_container h4{
     color: #BABABA;
 }
+
+@media screen and (max-width: 600px){
+
+    .Footer{
+        padding: 20px;
+    }
+
+    .Footer_container img{
+        position: relative;
+    }
+
+    .Footer_container h4{
+        font-size: 14px !important;
+        margin-top: 7px;
+    }
+}
