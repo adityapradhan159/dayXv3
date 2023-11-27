@@ -7,6 +7,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .Gateway span{
@@ -37,5 +39,23 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.gateway_background{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1200px){
+    .span_autonomous{
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .span_autonomous{
+        font-size: 30px;
+    }
 }
 

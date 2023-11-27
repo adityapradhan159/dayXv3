@@ -1,0 +1,147 @@
+.JoinWaitlist .modal-content{
+    border-radius: 20px !important;
+    background-color: white;
+    font-family: SF Pro !important;
+    overflow: hidden;
+}
+
+.JoinWaitlist .modal-dialog{
+    width: max-content !important;
+    max-width: max-content !important;
+    position: relative;
+}
+
+
+.JoinWaitlist-container{
+    width: 1080px;
+    display: flex;
+    position: relative;
+}
+
+.closePopup{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.joinWaitlist-descrip{
+    padding: 32px;
+    width: 55%;
+    background: #FFF;
+    box-shadow: 0px 4px 100px 0px rgba(0, 0, 0, 0.144) inset;
+   
+}
+
+.joinWaitlist-descrip p{
+    color: #5C6370;
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    margin-top: 16px;
+}
+
+.popupDesign{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.popupDesign p{
+    color: #0049CC;
+}
+
+.joinWaitlist-form{
+    width: 45%;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.joinWaitlist-form button{
+    padding: 14px 32px;
+    background-color: #0049CC;
+    color: white;
+    border: none;
+    outline: none;
+    margin-top: 12px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+@media screen and (max-width: 1100px){
+
+    .JoinWaitlist .modal-dialog{
+        width: auto !important;
+        max-width: auto !important;
+        position: relative;
+        padding: 0px 20px;
+    }
+
+    .JoinWaitlist-container{
+        width: 100%;
+    }
+    
+
+}
+
+
+
+@media screen and (max-width: 800px){
+
+    .JoinWaitlist-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .joinWaitlist-descrip{
+        width: 100%;
+        padding: 16px;
+    }
+
+    .joinWaitlist-descrip h1{
+        font-size: 20px !important;
+        /* font-weight: normal !important; */
+    }
+
+    .joinWaitlist-descrip p{
+        font-size: 14px;
+        margin-top: 8px;
+    }
+
+    .popupDesign p{
+        color: #0049CC;
+        font-size: 12px;
+    }
+
+    .joinWaitlist-form{
+        width: 100%;
+        padding: 24px;
+    }
+
+    .joinWaitlist-form button{
+        padding: 12px 32px;
+        border-radius: 30px;
+        font-size: 16px;
+    }
+
+    .popupDesign .dayXLogo{
+        width: 150px;
+    }
+
+    .popupDesign .dayXLogo2{
+        width: 80px;
+        margin-top: 16px;
+    }
+
+    .popupDesign p{
+        text-align: center;
+    }
+}

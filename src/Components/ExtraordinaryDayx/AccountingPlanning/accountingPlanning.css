@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    overflow: hidden;
 }
 
 
@@ -64,7 +65,25 @@
     color: #7330A7;
     font-weight: 700;
     /* line-height: 160%; */
-    border-bottom: 1px solid #7330A7;
+    text-decoration: underline;
+    /* border-bottom: 1px solid #7330A7; */
+}
+
+
+.card_container2{
+    position: relative;
+    z-index: 10;
+}
+
+.card_container2 object{
+    z-index: 11;
+}
+
+.Gradientlines{
+    position: absolute;
+    top: 35%;
+    left: -80px;
+    z-index: -1;
 }
 
 

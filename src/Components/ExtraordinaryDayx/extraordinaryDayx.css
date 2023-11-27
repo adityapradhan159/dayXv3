@@ -18,14 +18,14 @@
 
 .ExtraordinaryDayx_container_column1{
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap: 32px;
     margin-top: 48px;
 }
 
 .ExtraordinaryDayx_container_column2{
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap: 32px;
     margin-top: 32px;
 }
@@ -68,11 +68,35 @@
 }
 
 
-@media screen and (max-width: 600px){
+
+@media screen and (max-width: 950px){
+
+    .ExtraordinaryDayx_container_column1{
+        flex-wrap: wrap;
+    }
+
+    .ExtraordinaryDayx_container .realtime{
+        width: calc(50% - 16px);
+    }
+    .ExtraordinaryDayx_container .accounting{
+        width: calc(50% - 16px);
+    }
+
+    .ExtraordinaryDayx_container .gateway{
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+@media screen and (max-width: 700px){
 
     .ExtraordinaryDayx{
         padding: 72px 16px 35px 16px;
-        background-color: white;
+        /* background-color: white; */
     }   
 
     .ExtraordinaryDayx_container_column1{

@@ -4,6 +4,7 @@
     justify-content: center;
     background-color: #0F0F10;
     padding: 100px 20px;
+    overflow: hidden;
 }
 
 .OurSupporters_container h1{
@@ -24,10 +25,56 @@
     display: flex;
     justify-content: center;
     gap: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.rfm-marquee-container{
+    z-index: -1;
+}
+
+.rfm-marquee-container img{
+    margin-right: 32px;
+}
+
+.OurSupporters_carousel_container .leftBlurDiv{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -30px;
+    width: 100px;
+    height: 300px;
+    background: #0F0F10;
+    filter: blur(20px);
+
+}
+
+.OurSupporters_carousel_container .rightBlurDiv{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -30px;
+    width: 100px;
+    height: 300px;
+    background: #0F0F10;
+    filter: blur(20px);
 }
 
 
+@media screen and (max-width: 950px){
+    .OurSupporters_carousel_container .rightBlurDiv,.leftBlurDiv{
+        height: 100%;
+    }
+}
+
+
+
+
 @media screen and (max-width: 600px){
+
+    .OurSupporters_carousel_container .rightBlurDiv,.leftBlurDiv{
+        display: none;
+    }
 
     .OurSupporters{
         padding: 36px 16px !important;
@@ -38,6 +85,8 @@
         overflow: hidden;
     }
 
-    
-
+    .OurSupporters_carousel_container .rfm-marquee-container img{
+        margin-right: 24px;
+        width: 150px;
+    }
 }

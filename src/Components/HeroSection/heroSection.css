@@ -1,11 +1,55 @@
 .HeroSection{
     width: 100%;
     position: relative;
+    overflow: hidden;
+    height: 1085px;
+}
+
+.hero_section_widgets img{
+    /* width: ; */
 }
 
 
+.hero_section_widgets{
+    width: 1320px;
+    height: 500px;
+    position: absolute;
+    /* background-color: white; */
+    bottom: 127px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero_section_widgets .profitability_img{
+    position: absolute;
+    top: 0px;
+    left: 50px;
+}
+.hero_section_widgets .revenue_img{
+    position: absolute;
+    bottom: 0px;
+    left: -35px;
+}
+.hero_section_widgets .totalAssets_img{
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.hero_section_widgets .cashflow_img{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.hero_section_background{
+    width: 100%;
+    overflow-x: hidden;
+}
 .hero_section_background img{
-    width: 100%;   
+    min-width: 100%;   
+    min-height: 100%;
+    object-fit: cover;
 }
 
 .hero_section_description{
@@ -87,11 +131,55 @@
     opacity: 0.9;
 }
 
+
+.resp_hero_section_widgets{
+    display: none;
+}
+
+
+@media screen and (max-width: 1200px){
+    .hero_section_advantages_container{
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 1000px){
+    .hero_section_advantages_container{
+        width: 80%;
+    }
+
+
+    .hero_section_advantages_container{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .hero_section_advantages{
+        border-radius: 50px 50px 0px 0px;
+    }
+
+    .hero_section_advantages_container .advantages_card{
+        width: calc(50% - 6px);
+        text-align: center;
+        padding: 16px;
+    }
+
+    .advantages-divider{
+        width: 2px;
+        height: 30px;
+    }
+}
+
+
+
+
+
 @media screen and (max-width: 600px){
 
     .HeroSection{
         width: 100%;
-        height: 100vh;
+        height: 910px;
     }
 
     .hero_section_background{
@@ -104,6 +192,7 @@
     }
 
     .hero_section_background img{
+        /* display: none; */
         width: 100%;  
         height: 100vh; 
         object-fit: cover;
@@ -118,7 +207,28 @@
         margin-top: 24px;
     }
 
+    .hero_section_widgets{
+        display: none;
+    }
+
+    .resp_hero_section_widgets{
+        display: flex;
+        position: absolute;
+        bottom: 250px;
+        width: 100%;
+        z-index: 11;
+    }
+
+    .resp_hero_section_widgets img{
+        height: 250px;
+        /* object-fit: contain; */
+    }
+
     .hero_section_advantages{
+        z-index: 12;
+    }
+
+    /* .hero_section_advantages{
         border-radius: 50px 50px 0px 0px;
     }
 
@@ -136,6 +246,6 @@
     .advantages-divider{
         width: 2px;
         height: 30px;
-    }
+    } */
 
 }

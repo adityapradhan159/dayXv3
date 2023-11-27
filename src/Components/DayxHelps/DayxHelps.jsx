@@ -7,7 +7,7 @@ const DayxHelps = () => {
         <div className="DayxHelps_container section-container">
 
             <div className="dayxHelps_container1">
-                <h1>You will love us if <br/> you are <span>SMBs</span></h1>
+                <h1>You will love us if you are <br/><span>SMBs</span></h1>
             </div>
 
             <div className="dayxHelps_container2">

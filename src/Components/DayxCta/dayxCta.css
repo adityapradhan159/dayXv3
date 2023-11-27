@@ -54,6 +54,12 @@
     cursor: pointer;
 }
 
+.connectLink{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 
 @media screen and (max-width: 600px){
 

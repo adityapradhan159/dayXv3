@@ -2,10 +2,12 @@ import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import LandingPage from './Pages/LandingPage/LandingPage';
+import { useSelector } from 'react-redux'
 
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import JoinWaitlist from './Modals/JoinWaitlist/JoinWaitlist';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -27,10 +29,14 @@ const analytics = getAnalytics(app);
 
 
 function App() {
+
+  const { showRegisterPopUp } = useSelector((state) => state.showPopUp)
  
 
   return (
     <>
+    {showRegisterPopUp == true && <JoinWaitlist />}
+    {/* {<JoinWaitlist />} */}
       <LandingPage/>
     </>
   )

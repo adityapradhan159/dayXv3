@@ -16,7 +16,11 @@ const DayxCta = () => {
                 <Button className={"schedule_call"} name={"Schedule a call"}/>
                 <Button className={"join_waitlist"} name={"Join the waitlist"}/>
             </div>
-            <h3>or write to us: <span>contact@dayx.ai</span> </h3>
+            <div className='connectLink'>
+              <h3>or write to us: <span>contact@dayx.ai</span> </h3>
+              <img src="/assets/LandingPage/rightArrowWhite.svg" alt="" />
+            </div>
+            
         </div>
 
     </div>
