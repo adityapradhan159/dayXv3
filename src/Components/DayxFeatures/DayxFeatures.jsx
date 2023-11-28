@@ -14,7 +14,7 @@ const DayxFeatures = () => {
       </div>
 
       <div className="DayxFeatures_container section-container">
-        <h1>Your go-to tool for <span>effortless</span> and <span>powerful</span> financial management</h1>
+        <h1>Your go-to tool for <br/> <span>effortless</span> and <span>powerful</span> <br/> financial management</h1>
 
         <div className="DayFeatures_card_container">
           <div className="DayFeatures_card">

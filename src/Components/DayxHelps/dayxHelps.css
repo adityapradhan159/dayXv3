@@ -6,24 +6,28 @@
 
 .DayxHelps_container{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 140px;
+    /* gap: 140px; */
 }
 
 .dayxHelps_container1 h1{
     font-weight: 500;
-    width: 410px;
+    width: 590px;
 }
 
 .dayxHelps_container1 h1 span{
-    background: linear-gradient(181deg, #16A3B5 53.12%, #2ADBC2 116.64%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /* background: linear-gradient(181deg, #16A3B5 53.12%, #2ADBC2 116.64%);  */
+    background-clip: text !important; 
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+}
+
+.dayxHelps_container2{
+    width: 610px;
 }
 
 .dayxHelps_container2 h2{
@@ -51,8 +55,36 @@
     line-height: 172.4%;
 }
 
-.dayxHelps_container1 h1 br{
+.dayxHelps_container1 h1 br.br2{
     display: none;
+}
+
+.fade-in {
+    transition: opacity 1.5s ease;
+  }
+  
+.fade-out {
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+#greeting {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+  
+#greeting.fadeOut {
+    opacity: 0;
+}
+
+
+#dayHelps_Points {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+  
+#dayHelps_Points.fadeOut {
+    opacity: 0;
 }
 
 @media screen and (max-width: 930px){
@@ -77,6 +109,7 @@
     .dayxHelps_container1 h1{
         font-weight: 500;
         text-align: center;
+        line-height: 160%;
     }
 }
 
@@ -101,7 +134,11 @@
         width: 100%;
     }
 
-    .dayxHelps_container1 h1 br{
+    .dayxHelps_container1 h1 br.br1{
+        display: none;
+    }
+
+    .dayxHelps_container1 h1 br.br2{
         display: block;
     }
 

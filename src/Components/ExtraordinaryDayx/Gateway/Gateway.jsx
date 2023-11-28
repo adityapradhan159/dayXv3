@@ -9,6 +9,9 @@ const Gateway = () => {
         <img src="/assets/LandingPage/Ellipse.svg" alt="" />
       </div>
 
+      <div className="gateway_background_gradient">
+      </div>
+
         <span className='span_gatewayTo'>Gateway to</span>
         <span className='span_autonomous'>Autonomous</span>
         <span className='span_finance'>Finance</span>

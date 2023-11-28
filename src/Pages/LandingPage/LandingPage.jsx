@@ -17,9 +17,16 @@ const LandingPage = () => {
       <ExtraordinaryDayx/>
       <DayxFeatures/>
       <DayxHelps/>
-      <OurSupporters/>
-      <DayxCta/>
-      <Footer/>
+
+      <div className="component_container">
+        <div className="background_gradient">
+          <img src="/assets/LandingPage/radial_background.svg" alt="" />
+        </div>
+        <OurSupporters/>
+        <DayxCta/>
+        <Footer/>
+      </div>
+      
     </div>
   )
 }

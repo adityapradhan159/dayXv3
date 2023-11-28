@@ -37,6 +37,10 @@
     font-weight: 500;
 }
 
+.DayxFeatures_container h1 br{
+    display: none;
+}
+
 .DayxFeatures_container h1 span{
     font-weight: 800;
     color: #959595;
@@ -110,6 +114,14 @@
         overflow: hidden;
     }
 
+    .DayxFeatures_container h1{
+        line-height: 160%;
+    }
+
+    .DayxFeatures_container h1 br{
+        display: block;
+    }
+
     .dayxGradientLogo{
         width: 100%;
         padding: 0px 16px;
@@ -128,15 +140,19 @@
 
     .DayFeatures_card_container{
         flex-direction: column;
-        margin-top: 47px;
+        margin-top: 48px;
     }
 
     .DayFeatures_card{
         width: 100%;
-        padding: 20px;
+        padding: 16px;
     }
 
     .DayFeatures_card h3{
         margin-top: 16px !important;
+        font-size: 14px !important;
+        font-weight: 500;
+        padding-right: 90px;
+        line-height: 160%;
     }
 }

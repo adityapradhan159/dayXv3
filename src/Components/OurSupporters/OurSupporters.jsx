@@ -6,7 +6,7 @@ const OurSupporters = () => {
   return (
     <div className='OurSupporters'>
         <div className="OurSupporters_container section-container">
-            <h1>Building together with our <span>supporters</span></h1>
+            <h1>Building together <br/>with our <span>supporters</span></h1>
 
             <div className="OurSupporters_carousel_container">
 

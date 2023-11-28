@@ -11,6 +11,10 @@
     text-align: center;
 }
 
+.ExtraordinaryDayx_container h1 br{
+    display: none;
+}
+
 .ExtraordinaryDayx_container h1 span{
     font-weight: 800;
     color: #959595;
@@ -98,6 +102,14 @@
         padding: 72px 16px 35px 16px;
         /* background-color: white; */
     }   
+
+    .ExtraordinaryDayx_container h1 {
+        line-height: 160%;
+    }
+
+    .ExtraordinaryDayx_container h1 br{
+        display: block;
+    }
 
     .ExtraordinaryDayx_container_column1{
         display: flex;

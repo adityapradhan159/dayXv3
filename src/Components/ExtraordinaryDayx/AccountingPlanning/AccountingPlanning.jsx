@@ -27,9 +27,9 @@ const AccountingPlanning = () => {
 
         <div className="card_container2">
 
-            {/* <div className="Gradientlines">
-                <img src="/assets/LandingPage/gradientLines.svg" alt="" />
-            </div> */}
+            <div className="Gradientlines">
+                <img src="/assets/LandingPage/Lines.svg" alt="" />
+            </div>
 
             <div className="redirect_Link">
                 <h4>Take effective decisions</h4>

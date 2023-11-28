@@ -4,6 +4,15 @@ import Button from '../../ModularComponents/Button/Button'
 import Marquee from 'react-fast-marquee'
 
 const HeroSection = () => {
+
+
+
+  const handleCalendlyPopup = () => {
+    // window.open = 'https://calendly.com/adityapradhan-qw0/30min';
+    window.open('https://calendly.com/adityapradhan-qw0/30min',"myWindow", 'width=600,height=600');
+  }
+
+
   return (
     <div className='HeroSection'>
 
@@ -39,8 +48,8 @@ const HeroSection = () => {
           <h2 className='light_font_weight'>for your business!</h2>
 
           <div className="hero_section_action_btns">
-            <Button className={"schedule_call"} name={"Schedule a call"}/>
-            <Button className={"join_waitlist"} name={"Join the waitlist"}/>
+            <Button className={"schedule_call"} name={"Schedule a call"} onClick={handleCalendlyPopup}/>
+            {/* <Button className={"join_waitlist"} name={"Join the waitlist"}/> */}
           </div>
         </div>
 
@@ -49,28 +58,28 @@ const HeroSection = () => {
 
             <div className="advantages_card">
               <h1>90%</h1>
-              <p>Faster Financial Month Close</p>
+              <p>Faster Financial <br/> Month Close</p>
             </div>
 
             <div className="advantages-divider"></div>
 
             <div className="advantages_card">
               <h1>28hrs</h1>
-              <p>Savings per Week per User</p>
+              <p>Savings per Week<br/> per User</p>
             </div>
 
             <div className="advantages-divider divider"></div>
 
             <div className="advantages_card">
               <h1>10x</h1>
-              <p>Increase in Productivity</p>
+              <p>Increase in<br/> Productivity</p>
             </div>
 
             <div className="advantages-divider"></div>
 
             <div className="advantages_card">
               <h1>12x</h1>
-              <p>Faster Decision Making Time </p>
+              <p>Faster Decision<br/> Making Time </p>
             </div>
 
           </div>

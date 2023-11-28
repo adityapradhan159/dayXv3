@@ -10,7 +10,7 @@ const ExtraordinaryDayx = () => {
   return (
     <section className='ExtraordinaryDayx'>
         <div className="ExtraordinaryDayx_container section-container">
-            <h1>Get the <span>extraordinary</span> done with dayX</h1>
+            <h1>Get the <span>extraordinary</span> <br/> done with <span>dayX</span></h1>
 
 
             <div className="ExtraordinaryDayx_container_column1">

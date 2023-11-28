@@ -1,0 +1,41 @@
+.component_container{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.background_gradient{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* transform: translateX(-57%); */
+    min-width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background_gradient img{
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 600px){
+
+    .background_gradient img{
+        max-width: 100%;
+        min-height: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .background_gradient{
+        width: 100%;
+        height: 100%;
+        top: -40px;
+        left: 0%;
+        transform: translateX(0%);
+    }
+
+}

@@ -10,7 +10,7 @@ const Footer = () => {
         </div>
 
         <div className="Footer_container section-container">
-            <img src="/assets/linkedin.svg" alt="" />
+            {/* <img src="/assets/logo.svg" alt="" /> */}
             <h4>2023 Copyright - dayX Labs Pvt. Ltd. All rights reserved.</h4>
         </div>
     </div>
