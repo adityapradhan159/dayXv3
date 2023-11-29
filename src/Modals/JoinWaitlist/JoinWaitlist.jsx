@@ -156,10 +156,45 @@ const JoinWaitlist = () => {
             <div className="JoinWaitlist-container">
 
                 <div className="closePopup">
-                    <img src="/assets/popUpDismiss.svg" alt=""  onClick={()=>dispatch(setShowRegisterPopUp(false))}/>
+                    <img src="/assets/popupDismiss2.svg" alt=""  onClick={()=>dispatch(setShowRegisterPopUp(false))}/>
                 </div>
 
-                <div className="joinWaitlist-descrip">
+                <div className="popUp_web_Background">
+                    <img src="/assets/LandingPage/dayxWebImage.svg" alt=""  onClick={()=>dispatch(setShowRegisterPopUp(false))}/>
+                </div>
+
+                <div className="popUp_Background">
+                  <img src="/assets/popupBackground.svg" alt="" />
+                </div>
+
+                <div className="joinWaitList_Form_container">
+                    <div className="logo">
+                        <img src="/assets/logo.svg" alt="" />
+                    </div>
+                    <h3>You are one step close to level up your finance operation</h3>
+
+
+                    <div className="joinWaitList_Form">
+                      <Input label={"Name"} name={'name'} onChange={handleChange}/>
+                      <PhoneInput onChange={handlePhoneNo} label={'Phone'}/>
+                      <Input label={"Email"} name={'email'} onChange={handleChange}/>
+                      <Input label={"Role/Job Title"} name={'role'} onChange={handleChange}/>
+                      <Input label={"Company"} name={'orgName'} onChange={handleChange}/>
+                      <p>{err}</p>
+
+                      <div className="form-btn-container">
+                        <button onClick={() => submitRegisterForm()}>Schedule a call</button>
+                      </div>
+                    
+                    </div>
+
+
+
+                </div>
+
+
+
+                {/* <div className="joinWaitlist-descrip">
                     <h1>Join the waitlist!</h1>
                     <p>You are one step close to level up your finance operation.</p>
                     <div className='popupDesign'>
@@ -177,15 +212,11 @@ const JoinWaitlist = () => {
                     <Input label={"Email"} name={'email'} onChange={handleChange}/>
                     <Input label={"Role/Job Title"} name={'role'} onChange={handleChange}/>
                     <Input label={"Company"} name={'orgName'} onChange={handleChange}/>
-                    {/* <Input label={"Phone"} name={'contactNo'} onChange={handleChange}/> */}
-                    
-                    
                     <p>{err}</p>
 
                     <button onClick={() => submitRegisterForm()}>Submit</button>
 
-                </div>
-
+                </div> */}
             </div>
         </Modal.Body>
     </Modal>

@@ -24,37 +24,74 @@
     position: absolute;
     top: 0px;
     left: 50px;
+
+    /* transform: translateY(-0.5%);
+    animation: profitability_floater  1.5s infinite;
+    transition: ease 0.5s; */
 }
 .hero_section_widgets .revenue_img{
     position: absolute;
     bottom: 0px;
     left: -35px;
+
+    /* transform: translateY(-0.5%);
+    animation: floater 2s infinite;
+    transition: ease 0.5s; */
 }
 .hero_section_widgets .totalAssets_img{
     position: absolute;
     bottom: -70px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 29%;
+    /* transform: translateX(-50%); */
+
+    /* transform: translateY(-0.5%);
+    animation: floater 2.6s infinite;
+    transition: ease 0.5s; */
 }
 .hero_section_widgets .cashflow_img{
     position: absolute;
     top: 30px;
     right: 30px;
+
+
+    /* transform: translateY(-0.5%);
+    animation: floater 2s infinite;
+    transition: ease 0.5s; */
+
 }
+
+/* @keyframes floater {
+    0%{transform: translateY(-0.5%);transition: ease-in-out 0.5s;}
+    50%{transform: translateY(0.5%);transition: ease-in-out 0.5s;}
+}
+
+@keyframes profitability_floater {
+    0%{transform: translateY(-0.5%);transition: ease-in-out 0.5s;}
+    50%{transform: translateY(0.5%);transition: ease-in-out 0.5s;}
+} */
+
+
+
+
+
+
+
+
+
 
 .hero_section_background{
     width: 100%;
     overflow-x: hidden;
 }
 .hero_section_background img{
-    min-width: 100%;   
+    width: 100%;   
     min-height: 100%;
     object-fit: cover;
 }
 
 .hero_section_description{
     position: absolute;
-    top: 120px;
+    top: 134px;
     left: 50%;
     transform: translateX(-50%);
     color: #F4F4F4;
@@ -76,6 +113,8 @@
 
 .hero_section_description h2.light_font_weight{
     font-weight: 400;
+    line-height: 160%;
+    /* padding: 4px 0px; */
 }
 
 
@@ -135,6 +174,10 @@
 .resp_hero_section_widgets{
     display: none;
 }
+
+
+
+
 
 
 @media screen and (max-width: 1200px){

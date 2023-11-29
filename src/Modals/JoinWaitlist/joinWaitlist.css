@@ -12,9 +12,26 @@
 
 
 .JoinWaitlist-container{
-    width: 1080px;
+    width: 737px;
+    height: auto;
     display: flex;
     position: relative;
+    padding: 32px 54px 0px 54px;
+}
+
+.popUp_Background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+
+.popUp_Background img{
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
 }
 
 .closePopup{
@@ -22,60 +39,90 @@
     top: 20px;
     right: 20px;
     cursor: pointer;
+    z-index: 13;
 }
 
-.joinWaitlist-descrip{
-    padding: 32px;
-    width: 55%;
-    background: #FFF;
-    box-shadow: 0px 4px 100px 0px rgba(0, 0, 0, 0.144) inset;
-   
+.joinWaitList_Form_container{
+    width: 100%;
+    height: 100%;
+    /* background-color: white; */
+    z-index: 11;
 }
 
-.joinWaitlist-descrip p{
-    color: #5C6370;
-
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 160%;
-    margin-top: 16px;
-}
-
-.popupDesign{
+.joinWaitList_Form_container .logo{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+
+.joinWaitList_Form_container h3{
     margin-top: 32px;
+    color: white;
+
 }
 
-.popupDesign p{
-    color: #0049CC;
-}
 
-.joinWaitlist-form{
-    width: 45%;
+.joinWaitList_Form{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    margin-top: 48px;
+    border-radius: 16px 16px 0px 0px;
+    background: #FFF;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10), 0px 4px 40px 2px rgba(255, 255, 255, 0.05) inset;
+    backdrop-filter: blur(35.70000076293945px);
     padding: 32px;
+}
+
+.form-btn-container{
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
 }
 
-.joinWaitlist-form button{
-    padding: 14px 32px;
-    background-color: #0049CC;
+
+.joinWaitList_Form button{
+    padding: 16px 45px;
+    font-size: 24px;
+    border-radius: 43.108px;
+    background: #44255C;
     color: white;
     border: none;
     outline: none;
-    margin-top: 12px;
-    border-radius: 30px;
-    font-size: 18px;
-    font-weight: 600;
 }
 
 
-@media screen and (max-width: 1100px){
+.popUp_web_Background{
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    height: 100%;
+    z-index: 10;
+}
+
+.popUp_web_Background img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 820px){
 
     .JoinWaitlist .modal-dialog{
         width: auto !important;
@@ -84,63 +131,37 @@
         padding: 0px 20px;
     }
 
+
+    .joinWaitList_Form_container .logo img{
+        width: 100px;
+    }
+
     .JoinWaitlist-container{
         width: 100%;
+    }
+
+
+    .JoinWaitlist-container{
+        padding: 20px 0px 0px 0px;
+    }
+
+    .joinWaitList_Form_container h3{
+       padding: 0px 20px;
+    
+    }
+
+
+    .joinWaitList_Form{
+        padding: 20px;
+    }
+
+
+    .joinWaitList_Form button{
+        padding: 12px 25px;
+        font-size: 14px;
     }
     
 
 }
 
 
-
-@media screen and (max-width: 800px){
-
-    .JoinWaitlist-container{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .joinWaitlist-descrip{
-        width: 100%;
-        padding: 16px;
-    }
-
-    .joinWaitlist-descrip h1{
-        font-size: 20px !important;
-        /* font-weight: normal !important; */
-    }
-
-    .joinWaitlist-descrip p{
-        font-size: 14px;
-        margin-top: 8px;
-    }
-
-    .popupDesign p{
-        color: #0049CC;
-        font-size: 12px;
-    }
-
-    .joinWaitlist-form{
-        width: 100%;
-        padding: 24px;
-    }
-
-    .joinWaitlist-form button{
-        padding: 12px 32px;
-        border-radius: 30px;
-        font-size: 16px;
-    }
-
-    .popupDesign .dayXLogo{
-        width: 150px;
-    }
-
-    .popupDesign .dayXLogo2{
-        width: 80px;
-        margin-top: 16px;
-    }
-
-    .popupDesign p{
-        text-align: center;
-    }
-}

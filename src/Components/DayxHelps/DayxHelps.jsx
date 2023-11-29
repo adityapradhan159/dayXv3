@@ -1,35 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import "./dayxHelps.css"
+import { motion } from "framer-motion"
 
 
-
-// const FADE_INTERVAL_MS = 1750
-// const WORD_CHANGE_INTERVAL_MS = FADE_INTERVAL_MS * 2
-// const WORDS_TO_ANIMATE = ['SMBs','Investors','VCs']
 
 const DayxHelps = () => {
 
-//     const [fadeProp, setFadeProp] = useState({ fade: 'fade-in' })
-//   const [wordOrder, setWordOrder] = useState(0)
-
-//   useEffect(() => {
-//     const fadeTimeout = setInterval(() => {
-//       fadeProp.fade === 'fade-in' ? setFadeProp({ fade: 'fade-out' }) : setFadeProp({ fade: 'fade-in' })
-//     }, FADE_INTERVAL_MS)
-
-//     return () => clearInterval(fadeTimeout)
-//   }, [fadeProp])
-
-//   useEffect(() => {
-//     const wordTimeout = setInterval(() => {
-//       setWordOrder((prevWordOrder) => (prevWordOrder + 1) % WORDS_TO_ANIMATE.length)
-//     }, WORD_CHANGE_INTERVAL_MS)
-
-//     return () => clearInterval(wordTimeout)
-//   }, [])
-
-
-    const texts = ["SMBs", "Investors", "VCs"];
 
     const ttexts = [
         {
@@ -69,8 +45,6 @@ const DayxHelps = () => {
 
         return () => clearInterval(intervalId);
     }, []);
-
-
 
     useEffect(() => {
 
@@ -117,14 +91,86 @@ const DayxHelps = () => {
         WebkitTextFillColor: 'transparent',
     }
 
-   
+
+
+
+
+
+    const texts = ['SMBs', 'Vcs', 'Accountants'];
+
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [replay, setReplay] = useState(true);
+
+  useEffect(() => {
+
+
+    // const elem = document.querySelector('.dayxHelps_container2');
+
+    const intervalId = setInterval(() => {
+
+      setReplay(!replay);
+
+
+      setTimeout(() => {
+        setReplay(true);
+       
+        // Change text after a delay
+        setCurrentTextIndex((prevIndex) => (prevIndex + 1) % ttexts.length);
+      }, 300); // Adjust the delay as needed
+
+
+
+    }, 5000);
+
+    // Clear the interval on component unmount
+    return () => clearInterval(intervalId);
+  }, [replay]);
+
+  const shownText = ttexts[currentTextIndex].name;
+  const showTextContent = ttexts[currentTextIndex].content;
+  console.log(showTextContent,"Content")
+  const letters = Array.from(shownText);
+
+  const container = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: (i = 1) => ({
+      opacity: 1,
+      transition: { staggerChildren: 0.05, delayChildren: i * 0.1 },
+    }),
+  };
+
+  const child = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        // type: 'spring',
+        damping: 12,
+        stiffness: 200,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      y:10,
+      transition: {
+        // type: 'spring',
+        damping: 12,
+        stiffness: 200,
+      },
+    },
+  };
+
+
+
 
   return (
     <div className='DayxHelps'>
         <div className="DayxHelps_container section-container">
 
             <div className="dayxHelps_container1">
-                <h1>You will love us <br className='br1'/> if you are <br className='br2'/><span id='greeting'
+                {/* <h1>You will love us <br className='br1'/> if you are <br className='br2'/><span id='greeting'
                     style={currentText == "SMBs" ? SBMsinlineStyle 
                     : 
                     currentText == "VCs" ? VcsinlineStyle
@@ -133,16 +179,47 @@ const DayxHelps = () => {
                 }
                 
                 
-                >{currentText}</span></h1>
+                >{currentText}</span></h1> */}
+
+
+                <h1>You will love us <br className='br1'/> if you are <br className='br2'/>
+
+                
+                <span style={{display:"inline-block"}}>
+                <motion.span
+                    style={{ display: 'flex', overflow: 'hidden' }}
+                    variants={container}
+                    initial="hidden"
+                    animate={replay ? 'visible' : 'hidden'}
+                >
+                    {letters.map((letter, index) => (
+                    <motion.span key={index} variants={child}>
+                        {letter === ' ' ? '\u00A0' : letter}
+                    </motion.span>
+                    ))}
+                </motion.span>
+                </span>
+
+
+                </h1>
+            
+            
+            
             </div>
 
-            <div className="dayxHelps_container2">
+
+            
+
+
+            {
+                
+                <div className="dayxHelps_container2">
                 <h2>dayX helps you </h2>
 
 
-                <div id='dayHelps_Points'>
+                <div>
                 {
-                    pointsArr && pointsArr?.content.map((item) => (
+                    showTextContent && showTextContent.map((item) => (
                         <div className="dayHelps_Points" >
                             <div className="marker"></div>
                             <h3>{item}</h3>
@@ -152,23 +229,21 @@ const DayxHelps = () => {
                 </div>
                 
 
-                
-
-                {/* <div className="dayHelps_Points">
-                    <div className="marker"></div>
-                    <h3>Access real-time insights for quick decision-making.</h3>
-                </div>
-
-                <div className="dayHelps_Points">
-                    <div className="marker"></div>
-                    <h3>Plan efficiently with advanced forecasting.</h3>
-                </div> */}
-
                 <div className="redirect_Link">
                     <h4>Get started</h4>
                     <img src="/assets/LandingPage/rightArrow.svg" alt="" />
                 </div>
-            </div>
+                </div>
+            }
+
+            
+
+
+
+
+
+
+
 
         </div>
     </div>

@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./heroSection.css"
 import Button from '../../ModularComponents/Button/Button'
 import Marquee from 'react-fast-marquee'
+import { motion } from "framer-motion"
 
 const HeroSection = () => {
 
@@ -11,6 +12,73 @@ const HeroSection = () => {
     // window.open = 'https://calendly.com/adityapradhan-qw0/30min';
     window.open('https://calendly.com/adityapradhan-qw0/30min',"myWindow", 'width=600,height=600');
   }
+
+
+  const texts = ['Supercharge your finance operations', 'Manage your team effortlessly'];
+
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [replay, setReplay] = useState(true);
+
+  useEffect(() => {
+
+
+    // const elem = document.querySelector('.dayxHelps_container2');
+
+    const intervalId = setInterval(() => {
+
+      setReplay(!replay);
+
+
+      setTimeout(() => {
+        setReplay(true);
+       
+        // Change text after a delay
+        setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+      }, 300); // Adjust the delay as needed
+
+
+
+    }, 5000);
+
+    // Clear the interval on component unmount
+    return () => clearInterval(intervalId);
+  }, [replay]);
+
+  const shownText = texts[currentTextIndex];
+
+  const letters = Array.from(shownText);
+
+  const container = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: (i = 1) => ({
+      opacity: 1,
+      transition: { staggerChildren: 0.05, delayChildren: i * 0.1 },
+    }),
+  };
+
+  const child = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        // type: 'spring',
+        damping: 12,
+        stiffness: 200,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      y:10,
+      transition: {
+        // type: 'spring',
+        damping: 12,
+        stiffness: 200,
+      },
+    },
+  };
+
 
 
   return (
@@ -45,7 +113,24 @@ const HeroSection = () => {
         <div className="hero_section_description">
           <h2>AI Powered</h2>
           <h1>Accounting and FP&A Platform</h1>
-          <h2 className='light_font_weight'>for your business!</h2>
+          {/* <h2 className='light_font_weight'>for your business!</h2> */}
+          <h2 className='light_font_weight'>
+
+          <span style={{display:"inline-block"}}>
+                <motion.span
+                    style={{ display: 'flex', overflow: 'hidden' }}
+                    variants={container}
+                    initial="hidden"
+                    animate={replay ? 'visible' : 'hidden'}
+                >
+                    {letters.map((letter, index) => (
+                    <motion.span key={index} variants={child}>
+                        {letter === ' ' ? '\u00A0' : letter}
+                    </motion.span>
+                    ))}
+                </motion.span>
+                </span>
+          </h2>
 
           <div className="hero_section_action_btns">
             <Button className={"schedule_call"} name={"Schedule a call"} onClick={handleCalendlyPopup}/>

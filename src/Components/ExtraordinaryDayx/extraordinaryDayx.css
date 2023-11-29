@@ -1,6 +1,6 @@
 .ExtraordinaryDayx{
     width: 100%;
-    padding: 65px 20px 100px 20px;
+    padding: 36px 20px 100px 20px;
     display: flex;
     justify-content: center;
     background: #F9F9F9;
@@ -69,6 +69,11 @@
 .ExtraordinaryDayx_cards h3{
     color: #212121;
     font-weight: 700;
+}
+
+
+.ExtraordinaryDayx_container h3{
+    font-size: 20px !important;
 }
 
 

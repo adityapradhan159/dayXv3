@@ -1,5 +1,5 @@
 .DayxHelps{
-    padding: 100px 20px;
+    padding: 140px 20px;
     display: flex;
     justify-content: center;
 }
@@ -17,7 +17,7 @@
 }
 
 .dayxHelps_container1 h1 span{
-    /* background: linear-gradient(181deg, #16A3B5 53.12%, #2ADBC2 116.64%);  */
+    background: linear-gradient(181deg, #16A3B5 53.12%, #2ADBC2 116.64%); 
     background-clip: text !important; 
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
@@ -27,7 +27,8 @@
 }
 
 .dayxHelps_container2{
-    width: 610px;
+    width: 600px;
+    padding: 0px 5px;
 }
 
 .dayxHelps_container2 h2{
@@ -37,17 +38,17 @@
 
 .dayHelps_Points{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 9px;
 }
 
 .dayHelps_Points .marker{
-    width: 5px;
-    height: 5px;
+    min-width: 5px;
+    min-height: 5px;
     background-color: #404040;
     border-radius: 50%;
     margin-right: 8px;
-    /* margin-top: 20px; */
+    margin-top: 20px;
 }
 
 .dayHelps_Points h3{
@@ -59,13 +60,13 @@
     display: none;
 }
 
-.fade-in {
-    transition: opacity 1.5s ease;
-  }
-  
-.fade-out {
+.fadeOut {
     opacity: 0;
-    transition: opacity 1.5s ease;
+}
+  
+.fadeIn {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
 }
 
 #greeting {
@@ -86,6 +87,15 @@
 #dayHelps_Points.fadeOut {
     opacity: 0;
 }
+
+/* .dayxHelps_container2 {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .dayxHelps_container2.active {
+    opacity: 1;
+  } */
 
 @media screen and (max-width: 930px){
     .DayxHelps_container{
@@ -154,6 +164,11 @@
 
     .dayHelps_Points h3{
         font-size: 14px !important;
+    }
+
+
+    .dayHelps_Points .marker{
+        margin-top: 10px;
     }
 
 }
