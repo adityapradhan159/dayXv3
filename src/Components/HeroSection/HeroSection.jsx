@@ -1,20 +1,32 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import "./heroSection.css"
 import Button from '../../ModularComponents/Button/Button'
 import Marquee from 'react-fast-marquee'
 import { motion } from "framer-motion"
+import { useDispatch } from 'react-redux'
+import { setShowRegisterPopUp } from '../../Redux-Toolkit/PopUpSlice'
+import { gsap } from "gsap"
 
 const HeroSection = () => {
 
 
 
-  const handleCalendlyPopup = () => {
-    // window.open = 'https://calendly.com/adityapradhan-qw0/30min';
-    window.open('https://calendly.com/adityapradhan-qw0/30min',"myWindow", 'width=600,height=600');
-  }
+  // const handleCalendlyPopup = () => {
+  //   // window.open = 'https://calendly.com/adityapradhan-qw0/30min';
+  //   window.open('https://calendly.com/adityapradhan-qw0/30min',"myWindow", 'width=600,height=600');
+  // }
 
 
-  const texts = ['Supercharge your finance operations', 'Manage your team effortlessly'];
+  const texts = [
+    // 'Supercharge your finance operations', 
+    // 'Manage your team effortlessly',
+    'Streamline financial planning.',
+    'Make decisions, not calculations.',
+    'Get instant insights for quick decisions.',
+    'Stay ahead with dynamic forecasts.',
+    'Chat with your intelligent finance assistant.',
+    'Seamlessly consolidate your finance stack.'
+  ];
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [replay, setReplay] = useState(true);
@@ -34,11 +46,11 @@ const HeroSection = () => {
        
         // Change text after a delay
         setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
-      }, 300); // Adjust the delay as needed
+      }, 500); // Adjust the delay as needed
 
 
 
-    }, 5000);
+    }, 4000);
 
     // Clear the interval on component unmount
     return () => clearInterval(intervalId);
@@ -54,7 +66,10 @@ const HeroSection = () => {
     },
     visible: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: 0.05, delayChildren: i * 0.1 },
+      // transition: { staggerChildren: 0.05, delayChildren: i * 0.1 }, Don't delete this.....
+      // transition:{
+      //   ease: "linear"
+      // }
     }),
   };
 
@@ -63,6 +78,7 @@ const HeroSection = () => {
       opacity: 1,
       y: 0,
       transition: {
+
         // type: 'spring',
         damping: 12,
         stiffness: 200,
@@ -79,6 +95,57 @@ const HeroSection = () => {
     },
   };
 
+
+  const dispatch = useDispatch()
+
+  const handlePopup = () => {
+    dispatch(setShowRegisterPopUp(true))
+  }
+
+
+
+
+  const [animationPlayed, setAnimationPlayed] = useState(false);
+  const animationRef = useRef(null)
+
+  // useEffect(() => {
+  //   // Check if the animation has already been played
+  //   if (!sessionStorage.getItem('animationPlayed')) {
+  //     // Set the animationPlayed state to true
+  //     setAnimationPlayed(true);
+
+  //     // Set a session storage item to indicate that the animation has been played
+  //     sessionStorage.setItem('animationPlayed', 'true');
+  //   }
+  // }, []);
+
+  
+  // useEffect(() => {
+  //   // Check if the animation has already been played
+  //   const isAnimationPlayed = sessionStorage.getItem('animationPlayed');
+
+  //   if (!isAnimationPlayed) {
+  //     // Set a session storage item to indicate that the animation has been played
+  //     sessionStorage.setItem('animationPlayed', 'true');
+  //     // Set the animationPlayed state to true after the initial render
+  //     setAnimationPlayed(true);
+  //   }
+  // }, []);
+
+
+
+  useEffect(() => {
+
+    gsap.to(animationRef.current,{
+      top:'0%',
+      duration:2.5,
+      delay:.5
+    })
+    
+  }, [])
+  
+
+  
 
 
   return (
@@ -100,13 +167,12 @@ const HeroSection = () => {
             <img className='totalAssets_img' src="/assets/LandingPage/HeroElements/respTotalAssets.svg" alt="" />
             <img className='cashflow_img' src="/assets/LandingPage/HeroElements/respCashflow.svg" alt="" />
           </Marquee>
-
           
         </div>
 
 
 
-        <div className="hero_section_background">
+        <div ref={animationRef} className="hero_section_background">
           <img src="/assets/LandingPage/heroBackground.svg" alt="" />
         </div>
 
@@ -116,24 +182,26 @@ const HeroSection = () => {
           {/* <h2 className='light_font_weight'>for your business!</h2> */}
           <h2 className='light_font_weight'>
 
-          <span style={{display:"inline-block"}}>
+            <span style={{display:"inline-block"}}>
                 <motion.span
                     style={{ display: 'flex', overflow: 'hidden' }}
                     variants={container}
                     initial="hidden"
                     animate={replay ? 'visible' : 'hidden'}
                 >
-                    {letters.map((letter, index) => (
+                    {letters}
+                    {/* {letters.map((letter, index) => (
                     <motion.span key={index} variants={child}>
                         {letter === ' ' ? '\u00A0' : letter}
                     </motion.span>
-                    ))}
+                    ))} */}
                 </motion.span>
-                </span>
+            </span>
           </h2>
 
           <div className="hero_section_action_btns">
-            <Button className={"schedule_call"} name={"Schedule a call"} onClick={handleCalendlyPopup}/>
+            {/* <Button className={"schedule_call"} name={"Schedule a call"} onClick={handleCalendlyPopup}/> */}
+            <Button className={"schedule_call"} name={"Know dayX better"} onClick={handlePopup}/>
             {/* <Button className={"join_waitlist"} name={"Join the waitlist"}/> */}
           </div>
         </div>

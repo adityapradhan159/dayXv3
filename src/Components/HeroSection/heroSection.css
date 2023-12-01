@@ -3,6 +3,7 @@
     position: relative;
     overflow: hidden;
     height: 1085px;
+    background-color: #070707;
 }
 
 .hero_section_widgets img{
@@ -18,6 +19,7 @@
     bottom: 127px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 8;
 }
 
 .hero_section_widgets .profitability_img{
@@ -25,28 +27,27 @@
     top: 0px;
     left: 50px;
 
-    /* transform: translateY(-0.5%);
-    animation: profitability_floater  1.5s infinite;
-    transition: ease 0.5s; */
+    transform: translateY(-0.5%);
+    animation: profitability_floater  2.5s infinite;
+    transition: ease 0.5s;
 }
 .hero_section_widgets .revenue_img{
     position: absolute;
     bottom: 0px;
     left: -35px;
 
-    /* transform: translateY(-0.5%);
-    animation: floater 2s infinite;
-    transition: ease 0.5s; */
+    transform: translateY(-0.5%);
+    animation: floater 3s infinite;
+    transition: ease 0.5s;
 }
 .hero_section_widgets .totalAssets_img{
     position: absolute;
     bottom: -70px;
-    left: 29%;
-    /* transform: translateX(-50%); */
+    left: 29.5%;
 
-    /* transform: translateY(-0.5%);
-    animation: floater 2.6s infinite;
-    transition: ease 0.5s; */
+    transform: translateY(-0.5%);
+    animation: floater 3.6s infinite;
+    transition: ease 0.5s;
 }
 .hero_section_widgets .cashflow_img{
     position: absolute;
@@ -54,13 +55,18 @@
     right: 30px;
 
 
-    /* transform: translateY(-0.5%);
-    animation: floater 2s infinite;
-    transition: ease 0.5s; */
+    transform: translateY(-0.8%);
+    animation: cashflow_floater 3s infinite;
+    transition: ease 0.5s;
 
 }
 
-/* @keyframes floater {
+@keyframes cashflow_floater {
+    0%{transform: translateY(-0.8%);transition: ease-in-out 0.5s;}
+    50%{transform: translateY(0.8%);transition: ease-in-out 0.5s;}
+}
+
+@keyframes floater {
     0%{transform: translateY(-0.5%);transition: ease-in-out 0.5s;}
     50%{transform: translateY(0.5%);transition: ease-in-out 0.5s;}
 }
@@ -68,21 +74,55 @@
 @keyframes profitability_floater {
     0%{transform: translateY(-0.5%);transition: ease-in-out 0.5s;}
     50%{transform: translateY(0.5%);transition: ease-in-out 0.5s;}
+}
+
+
+
+
+
+
+/* .HeroSection:hover .hero_section_background{
+    transform: translateX(0);
+    opacity: 1;
 } */
-
-
-
-
-
-
-
 
 
 
 .hero_section_background{
     width: 100%;
-    overflow-x: hidden;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    /* transform: translateY(50%); */
+    z-index: 0;
+    transition: transform 1s ease;
+    animation: sunAnimation 2.5s;
 }
+
+
+
+
+
+/* @keyframes sunAnimation {
+    0% {
+      transform: translateY(50%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+
+/* Add this class to stop the animation after it's played once 
+.animation-done {
+    animation: none !important;
+    transform: translateY(0%);
+  } */
+
+
+
+
 .hero_section_background img{
     width: 100%;   
     min-height: 100%;
@@ -136,6 +176,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 9;
 }
 
 .hero_section_advantages_container{
@@ -299,3 +340,13 @@
     } */
 
 }
+
+
+
+/* @media screen and (max-width: 370px){
+
+    .hero_section_description h2.light_font_weight{
+        padding: 0px 40px;
+    }
+
+} */

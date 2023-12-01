@@ -6,10 +6,16 @@ import { setShowRegisterPopUp } from '../../Redux-Toolkit/PopUpSlice'
 
 const DayxCta = () => {
 
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
 
-  const handlePopup = () => {
-    dispatch(setShowRegisterPopUp(true))
+  // const handlePopup = () => {
+  //   dispatch(setShowRegisterPopUp(true))
+  // }
+
+
+  const handleCalendlyPopup = () => {
+    // window.open = 'https://calendly.com/adityapradhan-qw0/30min';
+    window.open('https://calendly.com/adityapradhan-qw0/30min',"myWindow", 'width=600,height=600');
   }
 
 
@@ -23,7 +29,8 @@ const DayxCta = () => {
         <div className="DayxCta_container">
             <h1>A quick chat with us <br/> is just the <span>start!</span></h1>
             <div className="cta-btns">
-                <Button className={"schedule_call"} name={"Know dayX better"} onClick={handlePopup}/>
+                {/* <Button className={"schedule_call"} name={"Know dayX better"} onClick={handlePopup}/> */}
+                <Button className={"schedule_call"} name={"Schedule a call"} onClick={handleCalendlyPopup}/>
                 {/* <Button className={"join_waitlist"} name={"Join the waitlist"}/> */}
             </div>
             <div className='connectLink'>

@@ -78,6 +78,20 @@
 
 
 
+.ExtraordinaryDayx_cards .redirect_Link img{
+    transition: transform 0.3s ease;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+
+.ExtraordinaryDayx_cards:hover .redirect_Link img{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+
 @media screen and (max-width: 950px){
 
     .ExtraordinaryDayx_container_column1{
@@ -135,6 +149,11 @@
 
     .redirect_Link h4{
         font-size: 18px !important;
+    }
+
+    .ExtraordinaryDayx_cards .redirect_Link img{
+        opacity: 1;
+        transform: translateX(0);
     }
 
 

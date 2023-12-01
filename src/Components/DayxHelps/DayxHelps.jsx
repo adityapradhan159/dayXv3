@@ -120,7 +120,7 @@ const DayxHelps = () => {
 
 
 
-    }, 5000);
+    }, 3000);
 
     // Clear the interval on component unmount
     return () => clearInterval(intervalId);
@@ -137,7 +137,7 @@ const DayxHelps = () => {
     },
     visible: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: 0.05, delayChildren: i * 0.1 },
+      // transition: { staggerChildren: 0.05, delayChildren: i * 0.1 },
     }),
   };
 
@@ -192,11 +192,12 @@ const DayxHelps = () => {
                     initial="hidden"
                     animate={replay ? 'visible' : 'hidden'}
                 >
-                    {letters.map((letter, index) => (
+                  {letters}
+                    {/* {letters.map((letter, index) => (
                     <motion.span key={index} variants={child}>
                         {letter === ' ' ? '\u00A0' : letter}
                     </motion.span>
-                    ))}
+                    ))} */}
                 </motion.span>
                 </span>
 
@@ -209,10 +210,39 @@ const DayxHelps = () => {
 
 
             
+            <motion.div 
+              className="dayxHelps_container2" key={shownText}
+              variants={child}
+              initial="hidden"
+              animate="visible"
+            >
+              <h2>dayX helps you </h2>
+              <div>
+                {showTextContent && showTextContent.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="dayHelps_Points"
+                    variants={child}
+                    initial="hidden"
+                    animate="visible"
+                  >
+                    <div className="marker"></div>
+                    <h3>{item}</h3>
+                  </motion.div>
+                ))}
+              </div>
+              <div className="redirect_Link">
+                <h4>Get started</h4>
+                <img src="/assets/LandingPage/rightArrow.svg" alt="" />
+              </div>
+            </motion.div>
 
 
-            {
-                
+            
+
+
+            {/* {
+                shownText == "SMBs" ?
                 <div className="dayxHelps_container2">
                 <h2>dayX helps you </h2>
 
@@ -234,7 +264,58 @@ const DayxHelps = () => {
                     <img src="/assets/LandingPage/rightArrow.svg" alt="" />
                 </div>
                 </div>
-            }
+
+                :
+
+                shownText == "VCs" ?
+                <div className="dayxHelps_container2">
+                <h2>dayX helps you </h2>
+
+
+                <div>
+                {
+                    showTextContent && showTextContent.map((item) => (
+                        <div className="dayHelps_Points" >
+                            <div className="marker"></div>
+                            <h3>{item}</h3>
+                        </div>
+                    ))
+                }
+                </div>
+                
+
+                <div className="redirect_Link">
+                    <h4>Get started</h4>
+                    <img src="/assets/LandingPage/rightArrow.svg" alt="" />
+                </div>
+                </div>
+
+                :
+
+                <div className="dayxHelps_container2">
+                <h2>dayX helps you </h2>
+
+
+                <div>
+                {
+                    showTextContent && showTextContent.map((item) => (
+                        <div className="dayHelps_Points" >
+                            <div className="marker"></div>
+                            <h3>{item}</h3>
+                        </div>
+                    ))
+                }
+                </div>
+                
+
+                <div className="redirect_Link">
+                    <h4>Get started</h4>
+                    <img src="/assets/LandingPage/rightArrow.svg" alt="" />
+                </div>
+                </div>
+
+
+            } */}
 
             
 
