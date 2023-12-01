@@ -2,7 +2,7 @@
     width: 100%;
     position: relative;
     overflow: hidden;
-    height: 1085px;
+    height: 1155px;
     background-color: #070707;
 }
 
@@ -16,10 +16,12 @@
     height: 500px;
     position: absolute;
     /* background-color: white; */
-    bottom: 127px;
+    bottom: 177px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 8;
+    /* opacity: 0; */
+    
 }
 
 .hero_section_widgets .profitability_img{
@@ -42,16 +44,16 @@
 }
 .hero_section_widgets .totalAssets_img{
     position: absolute;
-    bottom: -70px;
+    bottom: -100px;
     left: 29.5%;
-
+    /* transform: translateX(-50%); */
     transform: translateY(-0.5%);
     animation: floater 3.6s infinite;
     transition: ease 0.5s;
 }
 .hero_section_widgets .cashflow_img{
     position: absolute;
-    top: 30px;
+    top: 0px;
     right: 30px;
 
 
@@ -140,6 +142,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 0;
+    transition: transform .8s ease;
 }
 
 .hero_section_description h1{

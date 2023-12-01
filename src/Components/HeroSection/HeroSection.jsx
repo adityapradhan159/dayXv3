@@ -6,6 +6,12 @@ import { motion } from "framer-motion"
 import { useDispatch } from 'react-redux'
 import { setShowRegisterPopUp } from '../../Redux-Toolkit/PopUpSlice'
 import { gsap } from "gsap"
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 const HeroSection = () => {
 
@@ -50,7 +56,7 @@ const HeroSection = () => {
 
 
 
-    }, 4000);
+    }, 3000);
 
     // Clear the interval on component unmount
     return () => clearInterval(intervalId);
@@ -133,6 +139,10 @@ const HeroSection = () => {
   // }, []);
 
 
+  const heroRef = useRef(null)
+  const divRef = useRef(null)
+  const containerRef = useRef(null)
+
 
   useEffect(() => {
 
@@ -141,6 +151,37 @@ const HeroSection = () => {
       duration:2.5,
       delay:.5
     })
+
+
+    const fadeAnimationRef = [heroRef] 
+
+    fadeAnimationRef.forEach((fadeAnimation) => {
+      gsap.to(fadeAnimation.current,{
+        opacity:1,
+        duration:3,
+        delay:.8
+      })
+    })
+
+    
+
+    gsap.to(divRef.current, {
+      scrollTrigger: {
+        trigger: containerRef.current,
+        scroller:"body",
+        start: "40% 30%",
+        // pin: true,
+        end:"bottom 20%",
+        // markers: true,
+        scrub: true
+      },
+      bottom:"50",
+      opacity:.1,
+      scale:0
+      // scale:0.3,
+      // width:"10%",
+      // height:"30%"
+    });
     
   }, [])
   
@@ -149,11 +190,11 @@ const HeroSection = () => {
 
 
   return (
-    <div className='HeroSection'>
+    <div className='HeroSection' ref={containerRef}>
 
-        <div className="hero_section_widgets">
+        <div className="hero_section_widgets" ref={divRef}>
           <img className='profitability_img' src="/assets/LandingPage/HeroElements/profitability.svg" alt="" />
-          <img className='revenue_img' src="/assets/LandingPage/HeroElements/revenue.svg" alt="" />
+          <img className='revenue_img' src="/assets/LandingPage/HeroElements/revenue.png" alt="" />
           <img className='totalAssets_img' src="/assets/LandingPage/HeroElements/total assets.svg" alt="" />
           <img className='cashflow_img' src="/assets/LandingPage/HeroElements/Cash Flow.svg" alt="" />
         </div>
@@ -176,7 +217,7 @@ const HeroSection = () => {
           <img src="/assets/LandingPage/heroBackground.svg" alt="" />
         </div>
 
-        <div className="hero_section_description">
+        <div className="hero_section_description"  ref={heroRef}>
           <h2>AI Powered</h2>
           <h1>Accounting and FP&A Platform</h1>
           {/* <h2 className='light_font_weight'>for your business!</h2> */}

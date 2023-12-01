@@ -9,7 +9,7 @@ const DayxHelps = () => {
 
     const ttexts = [
         {
-            name:"SMBs",
+            name:"SMB",
             content:[
                 "Automate tasks, save time, control costs.",
                 "Access real-time insights for quick decision-making.",
@@ -17,14 +17,14 @@ const DayxHelps = () => {
             ]
         },
         {
-            name:"VCs",
+            name:"VC",
             content:[
                 "Conduct due diligence and monitor portfolio health real time.",
                 "Make investment decisions based on accurate financial data."
             ]
         },
         {
-            name:"Accountants",
+            name:"Accountant",
             content:[
                 "Manage multiple client accounts efficiently.",
                 "Collaborate securely, stay compliant, and simplify reporting for clients.",
@@ -73,6 +73,8 @@ const DayxHelps = () => {
         backgroundClip: 'text',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
+        display: 'flex',
+        overflow:'hidden'
     }
 
     
@@ -81,6 +83,8 @@ const DayxHelps = () => {
         backgroundClip: 'text',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
+        display: 'flex',
+        overflow:'hidden'
     }
 
     
@@ -89,6 +93,8 @@ const DayxHelps = () => {
         backgroundClip: 'text',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
+        display: 'flex',
+        overflow:'hidden'
     }
 
 
@@ -96,7 +102,7 @@ const DayxHelps = () => {
 
 
 
-    const texts = ['SMBs', 'Vcs', 'Accountants'];
+  // const texts = ['SMBs', 'Vcs', 'Accountants'];
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [replay, setReplay] = useState(true);
@@ -120,7 +126,7 @@ const DayxHelps = () => {
 
 
 
-    }, 3000);
+    }, 4000);
 
     // Clear the interval on component unmount
     return () => clearInterval(intervalId);
@@ -137,8 +143,30 @@ const DayxHelps = () => {
     },
     visible: (i = 1) => ({
       opacity: 1,
-      // transition: { staggerChildren: 0.05, delayChildren: i * 0.1 },
+      transition: { type: 'spring', staggerChildren: 0.05, delayChildren: i * 0.1 },
     }),
+  };
+
+
+  const parentDiv = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: 'spring',
+        damping: 15,
+        stiffness: 200,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      y: 60,
+      transition: {
+        // type: 'spring',
+        damping: 15,
+        stiffness: 200,
+      },
+    },
   };
 
   const child = {
@@ -182,12 +210,29 @@ const DayxHelps = () => {
                 >{currentText}</span></h1> */}
 
 
-                <h1>You will love us <br className='br1'/> if you are <br className='br2'/>
+                <h1>You will love us <br className='br1'/> if you are
+                {" "}
+                {
+                 
+                  shownText == "SMB" ? "an"
+                  :
+                  shownText == "VC" ? "a"
+                  :
+                  "an"
+                }
+                {" "}
+                <br className='br2'/>
 
                 
                 <span style={{display:"inline-block"}}>
                 <motion.span
-                    style={{ display: 'flex', overflow: 'hidden' }}
+                    // style={{ display: 'flex', overflow: 'hidden' }}
+                    style={shownText == "SMB" ? SBMsinlineStyle 
+                    : 
+                    shownText == "VC" ? VcsinlineStyle
+                    : 
+                    InvestorsinlineStyle
+                  }
                     variants={container}
                     initial="hidden"
                     animate={replay ? 'visible' : 'hidden'}
@@ -212,7 +257,7 @@ const DayxHelps = () => {
             
             <motion.div 
               className="dayxHelps_container2" key={shownText}
-              variants={child}
+              variants={parentDiv}
               initial="hidden"
               animate="visible"
             >

@@ -2,6 +2,7 @@
     padding: 140px 20px;
     display: flex;
     justify-content: center;
+    height: 533px;
 }
 
 .DayxHelps_container{
@@ -13,12 +14,12 @@
 
 .dayxHelps_container1 h1{
     font-weight: 500;
-    width: 590px;
+    width: 700px;
 }
 
 .dayxHelps_container1 h1 span{
-    background: linear-gradient(181deg, #16A3B5 53.12%, #2ADBC2 116.64%); 
-    background-clip: text !important; 
+    /* background: linear-gradient(181deg, #16A3B5 53.12%, #2ADBC2 116.64%);  */
+    /* background-clip: text !important;  */
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     font-style: normal;
