@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site":"dayx-prod",
     "public": "dist",
     "ignore": [
       "firebase.json",

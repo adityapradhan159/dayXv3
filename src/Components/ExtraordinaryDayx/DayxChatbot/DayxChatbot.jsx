@@ -1,7 +1,20 @@
 import React from 'react'
 import "./dayxChatbot.css"
+import { useDispatch } from 'react-redux'
+import { setShowRegisterPopUp } from '../../../Redux-Toolkit/PopUpSlice'
 
 const DayxChatbot = () => {
+
+    const dispatch = useDispatch()
+
+    const handlePopUp = () => {
+        dispatch(setShowRegisterPopUp({
+            show:true,
+            showAllInputs:false
+        }))
+    }
+
+
   return (
     <div className='DayxChatbot'>
         <div className="card_container1">
@@ -26,7 +39,7 @@ const DayxChatbot = () => {
 
         <div className="card_container2">
 
-            <div className="redirect_Link">
+            <div className="redirect_Link" onClick={handlePopUp}>
                 <h4>Get your assistant</h4>
                 <img src="/assets/LandingPage/rightArrow.svg" alt="" />
             </div>

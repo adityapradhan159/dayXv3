@@ -8,19 +8,21 @@ import { useSelector } from 'react-redux'
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import JoinWaitlist from './Modals/JoinWaitlist/JoinWaitlist';
+
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCwI2v0w-qCoPdaSVhykSLUnSQT7NDXdJE",
-  authDomain: "dayxv3-62e28.firebaseapp.com",
-  projectId: "dayxv3-62e28",
-  storageBucket: "dayxv3-62e28.appspot.com",
-  messagingSenderId: "918267910750",
-  appId: "1:918267910750:web:8c18f451a8843ace4032cf",
-  measurementId: "G-XG04FGQ3P9"
+  apiKey: "AIzaSyDtRGE_RuHCHEskpBZf48o1t4G-HG1DYqA",
+  authDomain: "dayx-prod.firebaseapp.com",
+  projectId: "dayx-prod",
+  storageBucket: "dayx-prod.appspot.com",
+  messagingSenderId: "38703449413",
+  appId: "1:38703449413:web:f87fb52c7ae2e3f3112a2c",
+  measurementId: "G-3TP3PWBBMV"
 };
 
 // Initialize Firebase
@@ -35,7 +37,7 @@ function App() {
 
   return (
     <>
-    {showRegisterPopUp == true && <JoinWaitlist />}
+    {showRegisterPopUp.show == true && <JoinWaitlist />}
     {/* {<JoinWaitlist />} */}
       <LandingPage/>
     </>

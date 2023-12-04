@@ -1,7 +1,21 @@
 import React from 'react'
 import "./realtimeForecast.css"
+import { useDispatch } from 'react-redux'
+import { setShowRegisterPopUp } from '../../../Redux-Toolkit/PopUpSlice'
 
 const RealtimeForecast = () => {
+
+
+    const dispatch = useDispatch()
+
+    const handlePopUp = () => {
+        dispatch(setShowRegisterPopUp({
+            show:true,
+            showAllInputs:false
+        }))
+    }
+
+
   return (
     <div className='RealtimeForecast'>
 
@@ -27,7 +41,7 @@ const RealtimeForecast = () => {
 
         <div className="card_container2">
 
-            <div className="redirect_Link">
+            <div className="redirect_Link" onClick={handlePopUp}>
                 <h4>Experience dynamic forecast</h4>
                 <img src="/assets/LandingPage/rightArrow.svg" alt="" />
             </div>

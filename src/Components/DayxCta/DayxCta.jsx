@@ -15,7 +15,7 @@ const DayxCta = () => {
 
   const handleCalendlyPopup = () => {
     // window.open = 'https://calendly.com/adityapradhan-qw0/30min';
-    window.open('https://calendly.com/adityapradhan-qw0/30min',"myWindow", 'width=600,height=600');
+    window.open('https://calendly.com/dayxdemo/30min',"myWindow", 'width=600,height=600');
   }
 
 
@@ -34,7 +34,15 @@ const DayxCta = () => {
                 {/* <Button className={"join_waitlist"} name={"Join the waitlist"}/> */}
             </div>
             <div className='connectLink'>
-              <h3>or write to us: <span>contact@dayx.ai</span> </h3>
+              <a 
+                target='_blank'
+                href='mailto:contact@dayx.ai'
+              >
+                <h3>or write to us:
+                  {" "}
+                  <span>contact@dayx.ai</span>
+                </h3>
+              </a>
               <img src="/assets/LandingPage/rightArrowWhite.svg" alt="" />
             </div>
             

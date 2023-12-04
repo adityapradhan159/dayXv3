@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import "./dayxHelps.css"
 import { motion } from "framer-motion"
+import { useDispatch } from 'react-redux'
+import { setShowRegisterPopUp } from '../../Redux-Toolkit/PopUpSlice'
 
 
 
@@ -134,7 +136,7 @@ const DayxHelps = () => {
 
   const shownText = ttexts[currentTextIndex].name;
   const showTextContent = ttexts[currentTextIndex].content;
-  console.log(showTextContent,"Content")
+  // console.log(showTextContent,"Content")
   const letters = Array.from(shownText);
 
   const container = {
@@ -189,6 +191,17 @@ const DayxHelps = () => {
       },
     },
   };
+
+
+
+  const dispatch = useDispatch()
+
+    const handlePopUp = () => {
+        dispatch(setShowRegisterPopUp({
+          show:true,
+          showAllInputs:false
+        }))
+    }
 
 
 
@@ -276,7 +289,7 @@ const DayxHelps = () => {
                   </motion.div>
                 ))}
               </div>
-              <div className="redirect_Link">
+              <div className="redirect_Link" onClick={handlePopUp}>
                 <h4>Get started</h4>
                 <img src="/assets/LandingPage/rightArrow.svg" alt="" />
               </div>

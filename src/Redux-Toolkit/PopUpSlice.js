@@ -1,7 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    showRegisterPopUp: false,
+    // showRegisterPopUp: false,
+    showRegisterPopUp: {
+        show:false,
+        showAllInputs:true
+    },
     showOtherComps: false
 }
 

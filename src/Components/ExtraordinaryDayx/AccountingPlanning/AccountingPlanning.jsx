@@ -1,7 +1,20 @@
 import React from 'react'
 import "./accountingPlanning.css"
+import { useDispatch } from 'react-redux'
+import { setShowRegisterPopUp } from '../../../Redux-Toolkit/PopUpSlice'
 
 const AccountingPlanning = () => {
+
+    const dispatch = useDispatch()
+
+    const handlePopUp = () => {
+        dispatch(setShowRegisterPopUp({
+            show:true,
+            showAllInputs:false
+        }))
+    }
+
+
   return (
     <div className='AccountingPlanning'>
 
@@ -31,7 +44,7 @@ const AccountingPlanning = () => {
                 <img src="/assets/LandingPage/Lines.svg" alt="" />
             </div>
 
-            <div className="redirect_Link">
+            <div className="redirect_Link" onClick={handlePopUp}>
                 <h4>Take effective decisions</h4>
                 <img src="/assets/LandingPage/rightArrow.svg" alt="" />
             </div>

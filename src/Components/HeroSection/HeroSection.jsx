@@ -105,7 +105,10 @@ const HeroSection = () => {
   const dispatch = useDispatch()
 
   const handlePopup = () => {
-    dispatch(setShowRegisterPopUp(true))
+    dispatch(setShowRegisterPopUp({
+      show:true,
+      showAllInputs:true
+    }))
   }
 
 

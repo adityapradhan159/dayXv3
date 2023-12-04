@@ -1,7 +1,21 @@
 import React from 'react'
 import "./integrateTools.css"
+import { useDispatch } from 'react-redux'
+import { setShowRegisterPopUp } from '../../../Redux-Toolkit/PopUpSlice'
 
 const IntegrateTools = () => {
+
+    const dispatch = useDispatch()
+
+    const handlePopUp = () => {
+        dispatch(setShowRegisterPopUp({
+            show:true,
+            showAllInputs:false
+        }))
+    }
+
+
+
   return (
     <div className='IntegrateTools'>
         <div className="card_container1">
@@ -21,7 +35,7 @@ const IntegrateTools = () => {
 
         <div className="card_container2">
 
-            <div className="redirect_Link">
+            <div className="redirect_Link" onClick={handlePopUp}>
                 <h4>Integrate tools easily</h4>
                 <img src="/assets/LandingPage/rightArrow.svg" alt="" />
             </div>

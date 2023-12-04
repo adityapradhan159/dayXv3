@@ -7,11 +7,12 @@ import { useEffect } from 'react'
 import axios from 'axios'
 import { logEvent,getAnalytics } from 'firebase/analytics'
 import { setShowRegisterPopUp } from '../../Redux-Toolkit/PopUpSlice'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import PhoneInput from '../../ModularComponents/PhoneInput/PhoneInput'
 
 const JoinWaitlist = () => {
 
+  const { showRegisterPopUp } = useSelector((state) => state.showPopUp)
 
     const analytics = getAnalytics()
     const dispatch = useDispatch()
@@ -46,33 +47,33 @@ const JoinWaitlist = () => {
     const submitRegisterForm = () => {
   
       if(!userDetails.name && !userDetails.email  && !userDetails.contactNo && !userDetails.orgName && !userDetails.role ){
-        setErr("*Please fill the form above")
+        setErr("Please fill the form above")
       }
       else if(!userDetails.name){
-        setErr("*Please enter your name")
+        setErr("Please enter your name")
       }
       else if(!userDetails.email){
-        setErr("*Please enter your email id")
+        setErr("Please enter your email id")
       }
       else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(userDetails.email)){
-        setErr("*Please enter correct email")
+        setErr("Please enter correct email")
       }
       else if(!contactNo){
-        setErr("*Please enter your phone number")
+        setErr("Please enter your phone number")
       }
       else if(contactNo.length <= 5){
-        setErr("*Please enter correct phone number")
+        setErr("Please enter correct phone number")
       }
       else if(!userDetails.orgName){
-        setErr("*Please enter your company name")
+        setErr("Please enter your company name")
       }
       else if(!userDetails.role){
-        setErr("*Please enter your role")
+        setErr("Please enter your role")
       }
       else{
   
         // ===================Registration Api Integration=====================//
-        axios.post("https://dev.dayx.ai/api/authorization/register-beta-user",JSON.stringify(userDetails),
+        axios.post("https://dev.dayx.ai/api/authorization/register-beta-user",JSON.stringify({...userDetails,contactNo}),
           {
             headers: {
                 "Content-Type": "application/json",
@@ -90,6 +91,10 @@ const JoinWaitlist = () => {
             role:""
           })
           setContactNo("")
+          dispatch(setShowRegisterPopUp({
+            show:false,
+            showAllInputs:false
+          }))
         })
         .catch((err) => {
           console.log(err)
@@ -127,7 +132,10 @@ const JoinWaitlist = () => {
           console.log(response)
           console.log(JSON.stringify(response.data));
           logEvent(analytics,"Data Register successful in Privyr",JSON.stringify(userDetails))
-          dispatch(setShowRegisterPopUp(false))
+        //   dispatch(setShowRegisterPopUp({
+        //     show:true,
+        //     showAllInputs:false
+        // }))
         })
         .catch((error) => {
           console.log(error);
@@ -156,11 +164,14 @@ const JoinWaitlist = () => {
             <div className="JoinWaitlist-container">
 
                 <div className="closePopup">
-                    <img src="/assets/popupDismiss2.svg" alt=""  onClick={()=>dispatch(setShowRegisterPopUp(false))}/>
+                    <img src="/assets/popupDismiss2.svg" alt=""  onClick={()=>dispatch(setShowRegisterPopUp({
+                      show:false,
+                      showAllInputs:false
+                    }))}/>
                 </div>
 
                 <div className="popUp_web_Background">
-                    <img src="/assets/LandingPage/dayxWebImage.svg" alt=""  onClick={()=>dispatch(setShowRegisterPopUp(false))}/>
+                    <img src="/assets/LandingPage/dayxWebImage.svg" alt="" />
                 </div>
 
                 <div className="popUp_Background">
@@ -178,12 +189,20 @@ const JoinWaitlist = () => {
                       <Input label={"Name"} name={'name'} onChange={handleChange}/>
                       <PhoneInput onChange={handlePhoneNo} label={'Phone'}/>
                       <Input label={"Email"} name={'email'} onChange={handleChange}/>
-                      <Input label={"Role/Job Title"} name={'role'} onChange={handleChange}/>
+                      {
+                        showRegisterPopUp.showAllInputs == true && 
+                        <Input label={"Role/Job Title"} name={'role'} onChange={handleChange}/>
+                      }
+                     
                       <Input label={"Company"} name={'orgName'} onChange={handleChange}/>
-                      <p>{err}</p>
+                      {
+                        err &&
+                        <p>*{err}</p>
+                      }
+                     
 
                       <div className="form-btn-container">
-                        <button onClick={() => submitRegisterForm()}>Schedule a call</button>
+                        <button onClick={() => submitRegisterForm()}>Submit</button>
                       </div>
                     
                     </div>
