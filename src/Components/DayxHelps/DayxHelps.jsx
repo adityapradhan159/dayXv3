@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import "./dayxHelps.css"
 import { motion } from "framer-motion"
 import { useDispatch } from 'react-redux'
@@ -101,38 +101,80 @@ const DayxHelps = () => {
 
 
 
-
-
-
-  // const texts = ['SMBs', 'Vcs', 'Accountants'];
-
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [replay, setReplay] = useState(true);
 
+  // const [isHovered, setIsHovered] = useState(false);
+  // const [isMouseDown, setIsMouseDown] = useState(false);
+  // const intervalIdRef = useRef(null);
+
+
+  // const handleMouseEnter = () => {
+  //   setIsHovered(true);
+  //   clearInterval(intervalIdRef.current); // Pause the interval
+  //   console.log("Mouse Enter")
+  // };
+
+  // const handleMouseLeave = () => {
+  //   setIsHovered(false);
+  //   console.log("Mouse Leave")
+  //   if (!isMouseDown) {
+  //     startInterval();
+  //   }
+  // };
+
+  // const handleMouseDown = () => {
+  //   setIsMouseDown(true);
+  //   clearInterval(intervalIdRef.current); // Pause the interval
+  // };
+
+  // const handleMouseUp = () => {
+  //   setIsMouseDown(false);
+  //   if (!isHovered) {
+  //     startInterval();
+  //   }
+  // };
+
+
+  // const startInterval = () => {
+  //   intervalIdRef.current = setInterval(() => {
+  //     setReplay(!replay);
+  //     setTimeout(() => {
+  //       setReplay(true);
+  //       setCurrentTextIndex((prevIndex) => (prevIndex + 1) % ttexts.length);
+  //     }, 300);
+  //   }, 4000);
+  // };
+
   useEffect(() => {
-
-
-    // const elem = document.querySelector('.dayxHelps_container2');
-
     const intervalId = setInterval(() => {
-
       setReplay(!replay);
-
-
       setTimeout(() => {
         setReplay(true);
-       
         // Change text after a delay
         setCurrentTextIndex((prevIndex) => (prevIndex + 1) % ttexts.length);
       }, 300); // Adjust the delay as needed
 
-
-
     }, 4000);
-
     // Clear the interval on component unmount
     return () => clearInterval(intervalId);
   }, [replay]);
+
+  // useEffect(() => {
+  //   startInterval();
+  //   return () => clearInterval(intervalIdRef.current);
+  // }, []);
+
+  // useEffect(() => {
+  //   // Clear the interval when hovering over dayxHelps_container2
+  //   if (isHovered || isMouseDown) {
+  //     clearInterval(intervalIdRef.current);
+  //   }
+  // }, [isHovered,isMouseDown]);
+
+
+
+
 
   const shownText = ttexts[currentTextIndex].name;
   const showTextContent = ttexts[currentTextIndex].content;
@@ -211,18 +253,6 @@ const DayxHelps = () => {
         <div className="DayxHelps_container section-container">
 
             <div className="dayxHelps_container1">
-                {/* <h1>You will love us <br className='br1'/> if you are <br className='br2'/><span id='greeting'
-                    style={currentText == "SMBs" ? SBMsinlineStyle 
-                    : 
-                    currentText == "VCs" ? VcsinlineStyle
-                    : 
-                    InvestorsinlineStyle
-                }
-                
-                
-                >{currentText}</span></h1> */}
-
-
                 <h1>You will love us <br className='br1'/> if you are
                 {" "}
                 {
@@ -258,18 +288,17 @@ const DayxHelps = () => {
                     ))} */}
                 </motion.span>
                 </span>
-
-
                 </h1>
-            
-            
-            
             </div>
 
 
             
             <motion.div 
               className="dayxHelps_container2" key={shownText}
+              // onMouseEnter={handleMouseEnter}
+              // onMouseLeave={handleMouseLeave}
+              // onMouseDown={handleMouseDown}
+              // onMouseUp={handleMouseUp}
               variants={parentDiv}
               initial="hidden"
               animate="visible"
@@ -294,95 +323,6 @@ const DayxHelps = () => {
                 <img src="/assets/LandingPage/rightArrow.svg" alt="" />
               </div>
             </motion.div>
-
-
-            
-
-
-            {/* {
-                shownText == "SMBs" ?
-                <div className="dayxHelps_container2">
-                <h2>dayX helps you </h2>
-
-
-                <div>
-                {
-                    showTextContent && showTextContent.map((item) => (
-                        <div className="dayHelps_Points" >
-                            <div className="marker"></div>
-                            <h3>{item}</h3>
-                        </div>
-                    ))
-                }
-                </div>
-                
-
-                <div className="redirect_Link">
-                    <h4>Get started</h4>
-                    <img src="/assets/LandingPage/rightArrow.svg" alt="" />
-                </div>
-                </div>
-
-                :
-
-                shownText == "VCs" ?
-                <div className="dayxHelps_container2">
-                <h2>dayX helps you </h2>
-
-
-                <div>
-                {
-                    showTextContent && showTextContent.map((item) => (
-                        <div className="dayHelps_Points" >
-                            <div className="marker"></div>
-                            <h3>{item}</h3>
-                        </div>
-                    ))
-                }
-                </div>
-                
-
-                <div className="redirect_Link">
-                    <h4>Get started</h4>
-                    <img src="/assets/LandingPage/rightArrow.svg" alt="" />
-                </div>
-                </div>
-
-                :
-
-                <div className="dayxHelps_container2">
-                <h2>dayX helps you </h2>
-
-
-                <div>
-                {
-                    showTextContent && showTextContent.map((item) => (
-                        <div className="dayHelps_Points" >
-                            <div className="marker"></div>
-                            <h3>{item}</h3>
-                        </div>
-                    ))
-                }
-                </div>
-                
-
-                <div className="redirect_Link">
-                    <h4>Get started</h4>
-                    <img src="/assets/LandingPage/rightArrow.svg" alt="" />
-                </div>
-                </div>
-
-
-            } */}
-
-            
-
-
-
-
-
-
-
 
         </div>
     </div>

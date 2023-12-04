@@ -64,12 +64,12 @@ const JoinWaitlist = () => {
       else if(contactNo.length <= 5){
         setErr("Please enter correct phone number")
       }
-      else if(!userDetails.orgName){
-        setErr("Please enter your company name")
-      }
-      else if(!userDetails.role){
-        setErr("Please enter your role")
-      }
+      // else if(!userDetails.orgName){
+      //   setErr("Please enter your company name")
+      // }
+      // else if(!userDetails.role){
+      //   setErr("Please enter your role")
+      // }
       else{
   
         // ===================Registration Api Integration=====================//
@@ -132,10 +132,10 @@ const JoinWaitlist = () => {
           console.log(response)
           console.log(JSON.stringify(response.data));
           logEvent(analytics,"Data Register successful in Privyr",JSON.stringify(userDetails))
-        //   dispatch(setShowRegisterPopUp({
-        //     show:true,
-        //     showAllInputs:false
-        // }))
+          dispatch(setShowRegisterPopUp({
+            show:false,
+            showAllInputs:false
+        }))
         })
         .catch((error) => {
           console.log(error);
@@ -178,6 +178,10 @@ const JoinWaitlist = () => {
                   <img src="/assets/popupBackground.svg" alt="" />
                 </div>
 
+                <div className="resp_popUp_Background">
+                  <img src="/assets/respPopupBackground.svg" alt="" />
+                </div>
+
                 <div className="joinWaitList_Form_container">
                     <div className="logo">
                         <img src="/assets/logo.svg" alt="" />
@@ -186,7 +190,7 @@ const JoinWaitlist = () => {
 
 
                     <div className="joinWaitList_Form">
-                      <Input label={"Name"} name={'name'} onChange={handleChange}/>
+                      <Input label={"Full Name"} name={'name'} onChange={handleChange}/>
                       <PhoneInput onChange={handlePhoneNo} label={'Phone'}/>
                       <Input label={"Email"} name={'email'} onChange={handleChange}/>
                       {

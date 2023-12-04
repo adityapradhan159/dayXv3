@@ -22,7 +22,7 @@ const OurSupporters = () => {
                 </div>
 
                 <div className="supporter">
-                  <img src="/assets/LandingPage/Supporters/enableMedicine.svg" alt="" />
+                  <img src="/assets/LandingPage/Supporters/enableMedicine.png" alt="" />
                 </div>
 
                 <div className="supporter">

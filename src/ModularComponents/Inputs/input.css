@@ -26,7 +26,18 @@
 }
 
 @media screen and (max-width: 600px){
+
+    .Input{
+        margin-bottom: 16px !important;
+    }
+
     .Input label{
-        font-size: 14px;
+        font-size: 16px;
+    }
+
+    .Input input{
+        width: 100%;
+        padding: 10px 16px;
+        font-size: 16px;
     }
 }
