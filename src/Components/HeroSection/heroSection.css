@@ -2,7 +2,8 @@
     width: 100%;
     position: relative;
     overflow: hidden;
-    height: 1155px;
+    /* height: 1155px; */
+    height: 1230px;
     background-color: #070707;
 }
 
@@ -16,7 +17,8 @@
     height: 500px;
     position: absolute;
     /* background-color: white; */
-    bottom: 177px;
+    /* bottom: 177px; */
+    bottom: 227px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 8;
@@ -44,7 +46,7 @@
 }
 .hero_section_widgets .totalAssets_img{
     position: absolute;
-    bottom: -100px;
+    bottom: -150px;
     left: 29.5%;
     /* transform: translateX(-50%); */
     transform: translateY(-0.5%);
@@ -53,7 +55,7 @@
 }
 .hero_section_widgets .cashflow_img{
     position: absolute;
-    top: 0px;
+    top: 40px;
     right: 30px;
 
 

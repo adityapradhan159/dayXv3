@@ -207,7 +207,7 @@ const HeroSection = () => {
 
           <Marquee autoFill={true}>
             <img className='profitability_img' src="/assets/LandingPage/HeroElements/respProfitability.svg" alt="" />
-            <img className='revenue_img' src="/assets/LandingPage/HeroElements/respRevenue.svg" alt="" />
+            <img className='revenue_img' src="/assets/LandingPage/HeroElements/respRevenue.png" alt="" />
             <img className='totalAssets_img' src="/assets/LandingPage/HeroElements/respTotalAssets.svg" alt="" />
             <img className='cashflow_img' src="/assets/LandingPage/HeroElements/respCashflow.svg" alt="" />
           </Marquee>
