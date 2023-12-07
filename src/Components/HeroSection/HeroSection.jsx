@@ -221,7 +221,7 @@ const HeroSection = () => {
         </div>
 
         <div className="hero_section_description"  ref={heroRef}>
-          <h2>AI Powered</h2>
+          <h2>Autonomous</h2>
           <h1>Accounting and FP&A Platform</h1>
           {/* <h2 className='light_font_weight'>for your business!</h2> */}
           <h2 className='light_font_weight'>

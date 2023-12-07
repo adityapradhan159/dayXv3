@@ -2,8 +2,8 @@
     width: 100%;
     position: relative;
     overflow: hidden;
-    /* height: 1155px; */
-    height: 1230px;
+    height: 1155px;
+    /* height: 1230px; */
     background-color: #070707;
 }
 
@@ -46,7 +46,7 @@
 }
 .hero_section_widgets .totalAssets_img{
     position: absolute;
-    bottom: -150px;
+    bottom: -140px;
     left: 29.5%;
     /* transform: translateX(-50%); */
     transform: translateY(-0.5%);
@@ -55,7 +55,7 @@
 }
 .hero_section_widgets .cashflow_img{
     position: absolute;
-    top: 40px;
+    top: 30px;
     right: 30px;
 
 
@@ -151,10 +151,12 @@
 .hero_section_description h1{
     margin: 16px 0px !important;
     font-weight: 800;
+    text-align: center;
 }
 
 .hero_section_description h2{
     font-weight: 800;
+    text-align: center;
 }
 
 .hero_section_description h2.light_font_weight{
