@@ -18,7 +18,7 @@ const DayxChatbot = () => {
   return (
     <div className='DayxChatbot'>
         <div className="card_container1">
-            <h3>GPT-Like Smart Bot Powered by LLM</h3>
+            <h3>Your AI Assistant powered by LLM</h3>
 
             <div className="AccountingPlanning_points">
 
@@ -29,7 +29,7 @@ const DayxChatbot = () => {
 
                 <div className="points_div">
                     <div className="marker"></div>
-                    <p>Instant insights, plain language.</p>
+                    <p>Instant insights with a simple conversation.</p>
                 </div>
 
             </div>
