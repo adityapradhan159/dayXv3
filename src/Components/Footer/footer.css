@@ -21,6 +21,7 @@
 .Footer_container{
     text-align: center;
     position: relative;
+    width: 100%;
 }
 
 .Footer_container img{

@@ -11,24 +11,23 @@ import Footer from '../../Components/Footer/Footer'
 
 const LandingPage = () => {
   return (
-    <div className='LandingPage'>
-      <Navbar/>
-      <HeroSection/>
-      <ExtraordinaryDayx/>
-      <DayxFeatures/>
-      <DayxHelps/>
+    <div className="LandingPage">
+      <Navbar />
+      <HeroSection />
+      <ExtraordinaryDayx />
+      <DayxFeatures />
+      <DayxHelps />
 
       <div className="component_container">
         <div className="background_gradient">
           <img src="/assets/LandingPage/radial_background.svg" alt="" />
         </div>
-        <OurSupporters/>
-        <DayxCta/>
-        <Footer/>
+        <OurSupporters />
+        <DayxCta />
+        <Footer />
       </div>
-      
     </div>
-  )
+  );
 }
 
 export default LandingPage
